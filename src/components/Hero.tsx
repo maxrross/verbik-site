@@ -166,18 +166,24 @@ export function Hero({
                                             key={image}
                                             className={`hidden sm:block absolute top-1/2 ${sideClass(index)}`}
                                         >
-                                            <img
+                                            <Image
                                                 src={image}
                                                 alt={sidePreviewAlt(index)}
+                                                width={1104}
+                                                height={2400}
+                                                sizes="(min-width: 640px) 35vw, 1px"
                                                 className="w-full h-auto drop-shadow-[0_26px_52px_rgba(0,0,0,0.4)]"
                                             />
                                         </motion.div>
                                     ))}
 
                                     <motion.div className={centerClass}>
-                                        <motion.img
+                                        <Image
                                             src={heroPrimaryImage}
                                             alt={heroPreviewAlt}
+                                            width={1104}
+                                            height={2400}
+                                            sizes="(min-width: 640px) 42vw, 1px"
                                             className="w-full h-auto drop-shadow-[0_28px_56px_rgba(0,0,0,0.44)]"
                                         />
                                     </motion.div>
@@ -198,18 +204,24 @@ export function Hero({
                                             key={image}
                                             className={sidePanelClass(index)}
                                         >
-                                            <img
+                                            <Image
                                                 src={image}
                                                 alt={panelPreviewAlt(index)}
+                                                width={1104}
+                                                height={2400}
+                                                sizes="(min-width: 640px) 36vw, 1px"
                                                 className="w-full rounded-xl shadow-[0_12px_24px_rgba(0,0,0,0.2)]"
                                             />
                                         </motion.div>
                                     ))}
 
                                     <motion.div className={mainPanelClass}>
-                                        <motion.img
+                                        <Image
                                             src={heroPrimaryImage}
                                             alt={heroPreviewAlt}
+                                            width={1104}
+                                            height={2400}
+                                            sizes="(min-width: 640px) 66vw, 1px"
                                             className="w-full h-auto rounded-xl shadow-[0_14px_26px_rgba(0,0,0,0.18)]"
                                         />
                                     </motion.div>

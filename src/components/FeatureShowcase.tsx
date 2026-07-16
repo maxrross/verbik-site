@@ -1,4 +1,5 @@
 import { AppConfig } from "../config/apps";
+import Image from "next/image";
 
 export function FeatureShowcase({ app }: { app: AppConfig }) {
     if (!app.detailFeatures?.length) {
@@ -56,9 +57,12 @@ export function FeatureShowcase({ app }: { app: AppConfig }) {
                                             }}
                                         />
                                         <span className="absolute inset-0 bg-gradient-to-b from-white/22 via-white/8 to-white/30 pointer-events-none" />
-                                        <img
+                                        <Image
                                             src={feature.imageSrc}
                                             alt={feature.imageAlt}
+                                            width={1320}
+                                            height={2868}
+                                            sizes="(max-width: 1023px) 100vw, 520px"
                                             className={`relative z-10 block w-full h-auto ${isVerbik ? "max-w-[520px]" : "max-w-[360px]"} mx-auto ${index % 2 === 0 ? "animate-float-soft" : "animate-float-gentle"}`}
                                             style={{ filter: "drop-shadow(0 0 0.7px rgba(6,14,24,0.95)) drop-shadow(0 24px 40px rgba(0,0,0,0.35))" }}
                                         />
@@ -76,9 +80,12 @@ export function FeatureShowcase({ app }: { app: AppConfig }) {
                                 >
                                     <span className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/15 to-white/40 animate-glow-shift" />
                                     <div className="relative z-10 rounded-2xl bg-white/80 backdrop-blur p-4 sm:p-5 md:p-6 shadow-outline min-h-[240px] flex flex-col items-center justify-center text-center gap-4">
-                                        <img
+                                        <Image
                                             src={feature.imageSrc}
                                             alt={feature.imageAlt}
+                                            width={1320}
+                                            height={2868}
+                                            sizes="(max-width: 1023px) 100vw, 520px"
                                             className={`w-full h-auto rounded-xl shadow-[0_16px_36px_rgba(0,0,0,0.2)] ${index % 2 === 0 ? "animate-float-soft" : "animate-float-gentle"}`}
                                         />
                                         <p className="text-zinc-700 max-w-[34ch] text-sm md:text-base">{feature.imageAlt}</p>

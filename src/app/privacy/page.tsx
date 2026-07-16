@@ -4,7 +4,7 @@ import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Privacy Policy",
-    description: "Read how Grove apps handle permissions, local data, and on-device AI processing.",
+    description: "Read how Verbik handles permissions, local data, and on-device processing.",
     path: "/privacy",
 });
 
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
                     <section>
                         <h2 className="text-xl font-semibold text-zinc-900 mb-2">Apps Covered by This Policy</h2>
                         <p className="mb-3">
-                            This policy applies across our published Grove apps and updates as new apps are added.
+                            This policy applies to Verbik.
                         </p>
                         <ul className="list-disc pl-5 space-y-2">
                             {apps.map((app) => (

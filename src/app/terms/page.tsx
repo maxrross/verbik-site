@@ -4,7 +4,7 @@ import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Terms of Use",
-    description: "Review Grove's terms for app usage, subscriptions, and user responsibilities.",
+    description: "Review Verbik's terms for app usage, purchases, and user responsibilities.",
     path: "/terms",
 });
 

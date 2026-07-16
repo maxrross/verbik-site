@@ -4,7 +4,7 @@ import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Help Center",
-    description: "Browse support docs, troubleshooting guides, and account help for Grove apps.",
+    description: "Browse Verbik support docs and troubleshooting guides.",
     path: "/help",
 });
 
@@ -16,7 +16,7 @@ export default function HelpIndex() {
             </small>
             <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Help & Support</h1>
             <p className="text-zinc-600 text-base sm:text-lg mb-8 md:mb-10 max-w-3xl">
-                Shared support for all Grove apps. App-specific help pages below are generated from the live app registry so this stays current as new apps ship.
+                Support for Verbik, including setup, privacy, purchases, and troubleshooting.
             </p>
 
             <div className="space-y-5 md:space-y-6">
@@ -61,7 +61,7 @@ export default function HelpIndex() {
                         Purchases are managed by Apple through the App Store.
                     </p>
                     <ul className="list-disc pl-5 text-zinc-600 space-y-2">
-                        <li>Most Grove apps use one-time unlock purchases (non-consumable), not recurring subscriptions.</li>
+                        <li>Verbik uses a one-time unlock purchase, not a recurring subscription.</li>
                         <li>Use App Store → profile to restore prior purchases on a reinstall or new device.</li>
                         <li>Refund requests are handled by Apple.</li>
                     </ul>

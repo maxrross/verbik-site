@@ -1,9 +1,9 @@
 export const studio = {
-    name: "Grove",
-    organizationName: "Grove Studio",
+    name: "Verbik",
+    organizationName: "Verbik",
     headline: "Verbik",
     subheadline: "Every word form. Four languages. Offline.",
-    supportEmail: "support@trygrove.dev",
-    logoPath: "/icons/grove-logo.svg",
+    supportEmail: "support@verbik.app",
+    logoPath: "/app-icons/verbik.png",
     siteUrl: "https://verbik.app",
 };

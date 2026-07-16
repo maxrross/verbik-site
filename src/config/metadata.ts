@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { studio } from "./studio";
 
-export const defaultSiteTitle = "Verbik — Offline Dictionary for iPhone";
-export const defaultSiteDescription = "Search Russian, Spanish, Italian, and Hebrew by the form you actually see. Verbik explains the match and works offline.";
+export const defaultSiteTitle = "Verbik: Offline Verb Dictionary for iPhone";
+export const defaultSiteDescription = "An offline Spanish, Russian, Italian, and Hebrew verb dictionary for iPhone. Search any word form and see complete conjugation and grammar tables.";
 
 export function buildPageMetadata({
     title,
@@ -26,6 +26,6 @@ export function buildPageMetadata({
             title,
             description,
         },
-        twitter: { card: "summary", title, description },
+        twitter: { card: "summary_large_image", title, description },
     };
 }

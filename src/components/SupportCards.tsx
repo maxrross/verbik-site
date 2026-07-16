@@ -45,7 +45,7 @@ export function SupportCards({ app }: { app: AppConfig }) {
                         </span>
                         <b className="font-semibold text-xl sm:text-2xl text-zinc-900">Contact</b>
                         <p className="max-w-[24ch] text-zinc-600">
-                            Reach us directly for bug reports, account issues, or product questions.
+                            Reach us directly for bug reports, word corrections, or product questions.
                         </p>
                         <p className="mt-auto pt-6 mb-2">
                             <a
@@ -66,7 +66,7 @@ export function SupportCards({ app }: { app: AppConfig }) {
                         </span>
                         <b className="font-semibold text-xl sm:text-2xl text-zinc-900">Privacy</b>
                         <p className="max-w-[24ch] text-zinc-600">
-                            See exactly how on-device processing works and what we do not collect.
+                            See what stays on-device, what may sync with iCloud, and what optional support sends.
                         </p>
                         <p className="mt-auto pt-6 mb-2">
                             <Link

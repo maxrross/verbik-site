@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { AppConfig, SiteUiCopy } from "../config/apps";
 import { ArrowRight, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { AnimatedIcon } from "./AnimatedIcon";
@@ -139,7 +140,7 @@ export function Hero({
 
                         <div className="absolute inset-x-0 top-0 h-10 sm:h-11 flex items-center justify-between px-4 sm:px-5 text-white/90 drop-shadow-sm font-medium text-[11px] sm:text-xs z-20">
                             <div className="flex items-center gap-2.5">
-                                <img
+                                <Image
                                     src={app.iconImage}
                                     alt={appIconAlt}
                                     width={18}
@@ -219,13 +220,17 @@ export function Hero({
                 )}
 
                 <motion.div className="absolute left-1/2 -translate-x-1/2 bottom-[-44px] sm:bottom-[-84px] z-30">
-                    <motion.img
-                        src={app.iconImage}
-                        alt={appIconAlt}
-                        width={178}
-                        height={178}
-                        className="w-32 h-32 sm:w-[178px] sm:h-[178px] rounded-[22%] shadow-[0_26px_44px_rgba(0,0,0,0.25)]"
-                    />
+                    <motion.div>
+                        <Image
+                            src={app.iconImage}
+                            alt={appIconAlt}
+                            width={178}
+                            height={178}
+                            sizes="(max-width: 639px) 128px, 178px"
+                            priority
+                            className="h-32 w-32 rounded-[22%] shadow-[0_26px_44px_rgba(0,0,0,0.25)] sm:h-[178px] sm:w-[178px]"
+                        />
+                    </motion.div>
                 </motion.div>
             </motion.div>
 
@@ -260,7 +265,7 @@ export function Hero({
                         </a>
                     </div>
 
-                    <p className="px-4 sm:px-0 text-sm opacity-60 max-w-[44ch]">
+                    <p className="max-w-[44ch] px-4 text-sm text-zinc-600 sm:px-0">
                         {app.downloadCtaNote ||
                             interpolate(copy.defaultDownloadNote, { appName: app.appName })}
                     </p>

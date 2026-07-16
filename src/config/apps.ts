@@ -1,4 +1,4 @@
-export const SUPPORTED_SITE_LOCALES = ["en", "es"] as const;
+export const SUPPORTED_SITE_LOCALES = ["en"] as const;
 export type SiteLocale = (typeof SUPPORTED_SITE_LOCALES)[number];
 
 export interface AppConfig {
@@ -35,16 +35,6 @@ export interface AppConfig {
     downloadCtaNote?: string;
     privacyMessage?: string;
     faqItems?: Array<{ question: string; answer: string }>;
-    localizedContent?: Partial<Record<SiteLocale, AppLocalizedContent>>;
-}
-
-export interface AppLocalizedContent {
-    appName?: string;
-    tagline?: string;
-    description?: string;
-    downloadCtaNote?: string;
-    privacyMessage?: string;
-    steps?: Array<{ title: string; description: string }>;
 }
 
 export interface SiteUiCopy {
@@ -75,8 +65,8 @@ const SITE_UI_COPY: Record<SiteLocale, SiteUiCopy> = {
     en: {
         hero: {
             overviewLabel: "Overview",
-            defaultDownloadNote: "No subscriptions. No in-app purchases. {{appName}} runs on-device with Apple Intelligence.",
-            featureLinkDesktop: "{{appName}} — on-device, private, and built for iOS",
+            defaultDownloadNote: "Free to download. One optional lifetime Pro unlock. No subscription.",
+            featureLinkDesktop: "{{appName}} — four offline dictionaries built for iPhone",
             featureLinkMobile: "Explore features",
             appIconAlt: "{{appName}} icon",
             heroPreviewAlt: "{{appName}} hero preview",
@@ -91,31 +81,8 @@ const SITE_UI_COPY: Record<SiteLocale, SiteUiCopy> = {
         downloadCta: {
             eyebrow: "Get Started",
             title: "Ready to try {{appName}}?",
-            subtitle: "Fast, private, on-device results with no account required.",
+            subtitle: "Search more than 106,000 Russian, Spanish, Italian, and Hebrew entries. No account required.",
             buttonLabel: "Download on the App Store",
-        },
-    },
-    es: {
-        hero: {
-            overviewLabel: "Resumen",
-            defaultDownloadNote: "Sin suscripciones ni compras dentro de la app. {{appName}} funciona en el dispositivo con Apple Intelligence.",
-            featureLinkDesktop: "{{appName}} — en el dispositivo, privado y creado para iOS",
-            featureLinkMobile: "Explorar funciones",
-            appIconAlt: "Ícono de {{appName}}",
-            heroPreviewAlt: "Vista principal de {{appName}}",
-            sidePreviewAlt: "Vista previa {{index}} de {{appName}} en iPhone",
-            panelPreviewAlt: "Panel de vista previa {{index}} de {{appName}}",
-        },
-        workflow: {
-            badge: "Flujo",
-            title: "Cómo funciona",
-            subtitle: "Un flujo claro de tres pasos para obtener resultados en menos de un minuto.",
-        },
-        downloadCta: {
-            eyebrow: "Empieza ahora",
-            title: "¿Listo para probar {{appName}}?",
-            subtitle: "Resultados rápidos, privados y en el dispositivo, sin necesidad de cuenta.",
-            buttonLabel: "Descargar en la App Store",
         },
     },
 };
@@ -126,7 +93,7 @@ export const apps: AppConfig[] = [
         appName: "Verbik",
         tagline: "Every word form. Four languages. Offline.",
         description:
-            "Search Russian, Spanish, Italian, and Hebrew by the form you actually see. Verbik explains the match, shows complete grammar, and keeps its core dictionaries available offline.",
+            "Verbik is an offline verb dictionary for iPhone. Search more than 106,000 Russian, Spanish, Italian, and Hebrew entries by the form you actually see, understand the match, and open complete grammar tables.",
         accentColor: "#5A00F5",
         accentColorLight: "#F1ECFF",
         accentGradient: { from: "#24008F", via: "#5A00F5", to: "#FF4C1F" },
@@ -160,7 +127,7 @@ export const apps: AppConfig[] = [
             {
                 icon: "character.book.closed.fill",
                 title: "Four offline dictionaries",
-                body: "Russian, Spanish, Italian, and Hebrew live together in one focused reference app.",
+                body: "More than 106,000 Russian, Spanish, Italian, and Hebrew entries live together in one focused reference app.",
             },
             {
                 icon: "textformat.abc",
@@ -238,7 +205,7 @@ export const apps: AppConfig[] = [
             },
             {
                 question: "How much does Verbik cost?",
-                answer: "Basic search remains useful for free. A one-time $14.99 purchase unlocks all entries and all four dictionaries permanently. There is no subscription.",
+                answer: "Verbik is free to download and includes a useful sample from every dictionary. A one-time $14.99 purchase unlocks all entries and all four dictionaries permanently. There is no trial or subscription.",
             },
             {
                 question: "Does Verbik support Hebrew niqqud and Russian stress?",
@@ -252,79 +219,13 @@ export const apps: AppConfig[] = [
         appStoreUrl: "https://apps.apple.com/us/app/verbik-verb-forms-dictionary/id6788358735",
         downloadCtaNote: "$14.99 lifetime unlock. No subscription.",
         privacyMessage: "Core dictionaries and synthetic pronunciation work offline. No account, ads, or third-party tracking.",
-        localizedContent: {
-            es: {
-                tagline: "Cada forma. Cuatro idiomas. Sin conexión.",
-                description: "Busca ruso, español, italiano y hebreo por la forma que encuentres. Verbik explica la coincidencia, muestra la gramática completa y mantiene sus diccionarios principales sin conexión.",
-                downloadCtaNote: "Desbloqueo de por vida por $14.99. Sin suscripción.",
-                privacyMessage: "Los diccionarios principales y la pronunciación sintética funcionan sin conexión. Sin cuenta, anuncios ni rastreo de terceros.",
-                steps: [
-                    { title: "Elige un idioma", description: "Cambia entre ruso, español, italiano y hebreo desde la búsqueda." },
-                    { title: "Busca la forma que encontraste", description: "Escribe una palabra, flexión, significado en inglés, transliteración o hebreo sin niqqud." },
-                    { title: "Entiende la entrada completa", description: "Ve por qué coincidió, consulta la gramática, escucha la pronunciación y guarda favoritos." },
-                ],
-            },
-        },
     },
 ];
 
-function localizeApp(app: AppConfig, locale: SiteLocale): AppConfig {
-    if (locale === "en") return app;
-    const localized = app.localizedContent?.[locale];
-    if (!localized) return app;
-    return {
-        ...app,
-        appName: localized.appName ?? app.appName,
-        tagline: localized.tagline ?? app.tagline,
-        description: localized.description ?? app.description,
-        downloadCtaNote: localized.downloadCtaNote ?? app.downloadCtaNote,
-        privacyMessage: localized.privacyMessage ?? app.privacyMessage,
-        steps: localized.steps ?? app.steps,
-    };
+export function getSiteUiCopy(_locale: SiteLocale = "en"): SiteUiCopy {
+    return SITE_UI_COPY.en;
 }
 
-function normalizeLocale(value: string | string[] | undefined): SiteLocale | null {
-    const raw = Array.isArray(value) ? value[0] : value;
-    if (!raw) return null;
-    const normalized = raw.trim().toLowerCase().replace(/_/g, "-");
-    if (normalized === "es" || normalized.startsWith("es-")) return "es";
-    if (normalized === "en" || normalized.startsWith("en-")) return "en";
-    return null;
-}
-
-export function resolveSiteLocale(params?: {
-    queryLocale?: string | string[] | undefined;
-    cookieLocale?: string | null | undefined;
-    acceptLanguage?: string | null | undefined;
-}): SiteLocale {
-    const fromQuery = normalizeLocale(params?.queryLocale);
-    if (fromQuery) return fromQuery;
-    const fromCookie = normalizeLocale(params?.cookieLocale ?? undefined);
-    if (fromCookie) return fromCookie;
-    const fromHeader = (params?.acceptLanguage ?? "")
-        .split(",")
-        .map((candidate) => normalizeLocale(candidate.split(";")[0]))
-        .find((candidate): candidate is SiteLocale => Boolean(candidate));
-    return fromHeader ?? "en";
-}
-
-export function getSiteUiCopy(locale: SiteLocale): SiteUiCopy {
-    return SITE_UI_COPY[locale] ?? SITE_UI_COPY.en;
-}
-
-export function getAppBySlug(slug: string, locale: SiteLocale = "en"): AppConfig | undefined {
-    const app = apps.find((candidate) => candidate.slug === slug);
-    return app ? localizeApp(app, locale) : undefined;
-}
-
-export function getSupportAppBySlug(slug: string, locale: SiteLocale = "en"): AppConfig | undefined {
-    return getAppBySlug(slug, locale);
-}
-
-export function getAllSlugs(): string[] {
-    return apps.map((app) => app.slug);
-}
-
-export function getAllSupportSlugs(): string[] {
-    return getAllSlugs();
+export function getAppBySlug(slug: string, _locale: SiteLocale = "en"): AppConfig | undefined {
+    return apps.find((candidate) => candidate.slug === slug);
 }

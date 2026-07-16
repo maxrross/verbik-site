@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     title: { default: defaultSiteTitle, template: `%s — Verbik` },
     description: defaultSiteDescription,
     applicationName: "Verbik",
-    authors: [{ name: studio.organizationName }],
-    creator: studio.organizationName,
+    authors: [{ name: studio.developerName }],
+    creator: studio.developerName,
+    publisher: studio.developerName,
     alternates: { canonical: "/" },
     openGraph: {
         type: "website",
@@ -29,6 +30,8 @@ export const metadata: Metadata = {
         images: ["/app-icons/verbik.png"],
     },
     robots: { index: true, follow: true },
+    category: "Reference",
+    itunes: { appId: "6788358735" },
     icons: {
         icon: [{ url: "/app-icons/verbik.png", type: "image/png" }],
         apple: [{ url: "/app-icons/verbik.png", type: "image/png" }],

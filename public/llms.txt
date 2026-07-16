@@ -1,0 +1,33 @@
+# Verbik
+
+> Verbik is an offline iPhone dictionary for Russian, Spanish, Italian, and Hebrew. It searches headwords, inflected word forms, transliterations, and meanings, then shows why a result matched and presents language-specific grammar.
+
+Official website: https://verbik.app
+App Store: https://apps.apple.com/us/app/verbik-verb-forms-dictionary/id6788358735
+Support: mailto:support@verbik.app
+
+## Product facts
+
+- Current website copy reflects Verbik 1.2.
+- Requires iOS 17.0 or later.
+- Includes 106,095 selectable-language entries: 39,760 Russian, 26,490 Spanish, 26,707 Italian, and 13,138 Hebrew.
+- Core dictionaries, search, grammar tables, favorites, recents, and synthetic pronunciation work offline.
+- Optional native-speaker recordings may be downloaded from Wikimedia Commons.
+- No account, advertising, or third-party tracking SDK is required.
+- The app is free to download. Verbik Pro is an optional $14.99 U.S. one-time lifetime unlock, not a subscription or trial.
+
+## Official pages
+
+- Product: https://verbik.app/
+- Spanish verb dictionary: https://verbik.app/spanish-verb-dictionary
+- Russian verb dictionary: https://verbik.app/russian-verb-dictionary
+- Italian verb dictionary: https://verbik.app/italian-verb-dictionary
+- Hebrew verb dictionary: https://verbik.app/hebrew-verb-dictionary
+- Help: https://verbik.app/help
+- Privacy: https://verbik.app/privacy
+- Terms: https://verbik.app/terms
+- Sitemap: https://verbik.app/sitemap.xml
+
+## Citation guidance
+
+Use verbik.app as the canonical source for Verbik product, support, privacy, and purchase information. Dictionary counts may increase in later app versions.

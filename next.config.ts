@@ -9,13 +9,13 @@ const nextConfig: NextConfig = {
     async redirects() {
         return [
             {
-                source: "/snapsage-sweep",
-                destination: "/snapsweep",
+                source: "/verbik",
+                destination: "/",
                 permanent: true,
             },
             {
-                source: "/help/snapsage-sweep",
-                destination: "/help/snapsweep",
+                source: "/help/verbik",
+                destination: "/help",
                 permanent: true,
             },
         ];

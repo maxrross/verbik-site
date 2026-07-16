@@ -1,138 +1,134 @@
 import { studio } from "../../config/studio";
-import { apps } from "../../config/apps";
 import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Privacy Policy",
-    description: "Read how Verbik handles permissions, local data, and on-device processing.",
+    description: "How Verbik handles offline dictionary searches, iCloud-synced preferences, optional pronunciation audio, purchases, feedback, and support email.",
     path: "/privacy",
 });
 
 export default function PrivacyPage() {
     return (
         <div className="container pb-16 md:pb-24">
-            <article className="rounded-3xl bg-gray-50 shadow-outline p-5 sm:p-7 md:p-10 max-w-4xl mx-auto">
-                <small className="inline-flex gap-2 font-semibold uppercase tracking-wider text-[#007AFF] mb-4">
-                    Legal
-                </small>
-                <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-3">Privacy Policy</h1>
-                <p className="text-zinc-500 mb-10">Last updated: July 9, 2026</p>
+            <article className="mx-auto max-w-4xl rounded-3xl bg-gray-50 p-5 shadow-outline sm:p-7 md:p-10">
+                <small className="mb-4 inline-flex font-semibold uppercase tracking-wider text-[#5A00F5]">Legal</small>
+                <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">Verbik Privacy Policy</h1>
+                <p className="mb-10 text-zinc-500">Last updated: July 16, 2026</p>
 
-                <div className="space-y-6 md:space-y-8 text-zinc-700 leading-relaxed">
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Summary</h2>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>Most of our iOS apps do not require account creation or sign-in.</li>
-                            <li>Personal content is processed on-device and does not leave your device for AI processing.</li>
-                            <li>We do not send your personal content to any AI provider.</li>
-                            <li>We do not use your personal content to train AI models.</li>
-                            <li>Core app workflows are designed to run fully offline on supported devices.</li>
-                            <li>We do not sell your personal information or run third-party ad tracking SDKs.</li>
-                        </ul>
-                    </section>
-
-                    <section className="rounded-2xl bg-[#EEF7FF] border border-[#CFE6FF] p-5 sm:p-6">
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">On-Device and Offline Guarantee</h2>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>Your personal content stays on your device.</li>
-                            <li>Your personal content is not sent to external AI providers.</li>
-                            <li>We do not use your content for AI model training.</li>
-                            <li>Core AI features are designed to run completely offline on supported devices.</li>
+                <div className="space-y-7 leading-relaxed text-zinc-700 md:space-y-9">
+                    <section className="rounded-2xl border border-violet-200 bg-violet-50 p-5 sm:p-6">
+                        <h2 className="mb-3 text-xl font-semibold text-zinc-900">The short version</h2>
+                        <ul className="list-disc space-y-2 pl-5">
+                            <li>Verbik requires no account and includes no advertising or third-party tracking SDK.</li>
+                            <li>Core dictionary search, grammar tables, favorites, recents, and synthetic pronunciation work on your device.</li>
+                            <li>Favorites, recents, and language preferences may sync through your Apple iCloud account.</li>
+                            <li>Network access is used only for App Store purchases, optional native-speaker audio, feedback you choose to send, support email, and normal website delivery.</li>
+                            <li>We do not sell personal information or use it for advertising.</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Apps Covered by This Policy</h2>
-                        <p className="mb-3">
-                            This policy applies to Verbik.
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Scope and operator</h2>
+                        <p>
+                            This policy applies to the Verbik iOS app and the website at verbik.app. Verbik is developed and operated by {studio.developerName}. It does not apply to third-party websites or services that you open separately.
                         </p>
-                        <ul className="list-disc pl-5 space-y-2">
-                            {apps.map((app) => (
-                                <li key={app.slug}>
-                                    <strong>{app.appName}</strong>: {app.tagline}
-                                </li>
-                            ))}
-                        </ul>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Information We Access</h2>
-                        <p className="mb-3">
-                            Depending on the app and features you use, we may request access to device permissions such as Photos, microphone, or files.
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Core dictionary use</h2>
+                        <p>
+                            Verbik&apos;s Russian, Spanish, Italian, and Hebrew dictionary database is bundled with the app. Search queries, viewed entries, grammar tables, and synthetic text-to-speech are processed locally. We do not receive those searches or maintain a server-side search history.
                         </p>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>Content is processed on your device to provide core app functionality.</li>
-                            <li>We do not upload your personal photos, recordings, or documents to our servers for analysis.</li>
-                            <li>When iCloud is enabled, Apple may download originals to your device as needed.</li>
-                        </ul>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">App Data Stored On Device</h2>
-                        <p className="mb-3">
-                            Our apps may store local data to function properly, including:
-                        </p>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>App preferences and settings</li>
-                            <li>Feature usage counters (including free-tier limits where applicable)</li>
-                            <li>Local generation history or recent activity</li>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Data stored on your device and in iCloud</h2>
+                        <p className="mb-3">Verbik stores the following app data so its features work:</p>
+                        <ul className="list-disc space-y-2 pl-5">
+                            <li>favorites and recently viewed entries;</li>
+                            <li>selected learning and definition languages;</li>
+                            <li>appearance and other app preferences;</li>
+                            <li>a local successful-lookup counter used to decide when to ask for an App Store review; and</li>
+                            <li>purchase entitlement information supplied by Apple.</li>
                         </ul>
                         <p className="mt-3">
-                            This data is stored in local app storage unless you explicitly share details with support.
+                            Favorites, recent entries, and language preferences may be copied to Apple&apos;s iCloud key-value store when you are signed into iCloud and iCloud is available. Apple processes that data under its own privacy policy. You can stop iCloud access in your device settings and remove local app data by deleting Verbik. App Store transaction records remain with Apple.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">AI Features</h2>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Optional pronunciation downloads</h2>
                         <p>
-                            Some apps include AI-assisted features. These features are designed to run on-device via Apple-provided frameworks, without sending your personal content to external AI providers. Availability may vary by device, iOS version, and Apple settings.
+                            On-device speech is available without sending the word to us. Some entries also offer an optional native-speaker recording from Wikimedia Commons. If you tap that recording, your device requests the audio file from upload.wikimedia.org. Wikimedia may receive ordinary request information such as your IP address and user agent under its own policies. Verbik temporarily downloads the audio for playback and does not build a server-side listening profile.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Purchases and Subscriptions</h2>
-                        <p>
-                            If an app offers subscriptions or in-app purchases, payments are processed by Apple through the App Store. We do not receive payment card information.
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Feedback and word corrections</h2>
+                        <p className="mb-3">
+                            The in-app “Request a Feature or Fix” form is optional. When you press Send, it transmits:
                         </p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Analytics, Tracking, and Advertising</h2>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>We do not sell personal information.</li>
-                            <li>We do not run third-party advertising SDKs in our apps.</li>
-                            <li>We do not intentionally track you across apps and websites.</li>
+                        <ul className="list-disc space-y-2 pl-5">
+                            <li>the feedback category and message you entered;</li>
+                            <li>your email address, only if you choose to provide it;</li>
+                            <li>the Verbik version and build number;</li>
+                            <li>your iOS version and device model identifier; and</li>
+                            <li>the learning language selected in Verbik.</li>
                         </ul>
                         <p className="mt-3">
-                            Apple may provide diagnostic information to developers depending on your device settings. Apple controls those systems under its own policies.
+                            Our server processes the submission and forwards it to a private support channel hosted by Discord. We use it only to investigate the report, correct dictionary data, reply when requested, and improve Verbik. Do not include passwords or sensitive personal information. We retain support records only as long as reasonably needed for those purposes and operational records.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Data Retention and Deletion</h2>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Purchases</h2>
                         <p>
-                            Because data is primarily stored on-device, you can remove most local data by deleting the app. Subscription and billing records are maintained by Apple as part of your App Store account.
+                            Verbik Pro is a non-consumable in-app purchase processed by Apple through StoreKit. Apple handles your Apple Account, payment method, billing, refunds, and transaction records. Verbik receives only the product and entitlement information needed to unlock Pro; we do not receive your card number.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Children&apos;s Privacy</h2>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Website and support email</h2>
                         <p>
-                            Our apps are not directed to children under 13, and we do not knowingly collect personal information from children.
+                            The website does not use an analytics or advertising tracker. Its hosting provider, Vercel, may process normal technical request data such as IP address, browser type, requested URL, and timestamps to deliver and secure the site. Emails sent to {studio.supportEmail} are routed through Cloudflare Email Routing and delivered to a Google Gmail mailbox. Those providers process messages and routing data under their own terms and policies.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Changes to This Policy</h2>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">No tracking, ads, or sale of data</h2>
                         <p>
-                            We may update this Privacy Policy from time to time. Any updates will be posted on this page with a revised Last updated date.
+                            Verbik does not contain third-party advertising, does not track you across other companies&apos; apps or websites, and does not sell or share personal information for cross-context behavioral advertising. Apple may provide developers with aggregated sales, crash, or diagnostic information according to your Apple settings; Apple controls that collection.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-semibold text-zinc-900 mb-2">Contact</h2>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Retention, deletion, and your choices</h2>
+                        <ul className="list-disc space-y-2 pl-5">
+                            <li>Delete favorites or recent entries in the app where controls are available, or delete Verbik to remove its local data.</li>
+                            <li>Manage Verbik&apos;s iCloud access in iOS Settings.</li>
+                            <li>Do not submit the optional feedback form if you do not want its listed information sent.</li>
+                            <li>Email us to request deletion of a feedback or support record you previously sent. We may need enough information to locate it and may retain records required for security or legal obligations.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Children</h2>
                         <p>
-                            Questions: <a href={`mailto:${studio.supportEmail}`} className="text-[#007AFF] font-medium">{studio.supportEmail}</a>
+                            Verbik is a general-audience reference app and is not directed to children under 13. We do not knowingly collect personal information from children. A parent or guardian who believes a child sent information through feedback may contact us for deletion.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Security and changes</h2>
+                        <p>
+                            We use reasonable safeguards, but no electronic transmission or storage system is completely secure. We may update this policy as Verbik changes. The revised date at the top will identify the latest version, and material changes will be communicated where required.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="mb-2 text-xl font-semibold text-zinc-900">Contact</h2>
+                        <p>
+                            Privacy questions or deletion requests: <a href={`mailto:${studio.supportEmail}?subject=Verbik privacy request`} className="font-medium text-[#5A00F5]">{studio.supportEmail}</a>
                         </p>
                     </section>
                 </div>

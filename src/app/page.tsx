@@ -1,14 +1,10 @@
 import { preload } from "react-dom";
-import { cookies, headers } from "next/headers";
-import {
-    getAppBySlug,
-    getSiteUiCopy,
-    resolveSiteLocale,
-} from "../config/apps";
+import { getAppBySlug, getSiteUiCopy } from "../config/apps";
 import { Hero } from "../components/Hero";
 import { ProblemPain } from "../components/ProblemPain";
 import { HowItWorks } from "../components/HowItWorks";
 import { FeatureGrid } from "../components/FeatureGrid";
+import { LanguageDictionaryLinks } from "../components/LanguageDictionaryLinks";
 import { SocialProof } from "../components/SocialProof";
 import { FeatureShowcase } from "../components/FeatureShowcase";
 import { FAQ } from "../components/FAQ";
@@ -17,60 +13,85 @@ import { SupportCards } from "../components/SupportCards";
 import { DownloadCTA } from "../components/DownloadCTA";
 import { studio } from "../config/studio";
 
-export default async function HomePage({
-    searchParams,
-}: {
-    searchParams?: Promise<Record<string, string | string[] | undefined>>;
-}) {
-    const resolvedSearchParams = searchParams ? await searchParams : {};
-    const cookieStore = await cookies();
-    const headerStore = await headers();
-    const locale = resolveSiteLocale({
-        queryLocale: resolvedSearchParams.lang ?? resolvedSearchParams.locale,
-        cookieLocale: cookieStore.get("site_locale")?.value,
-        acceptLanguage: headerStore.get("accept-language"),
-    });
-    const app = getAppBySlug("verbik", locale);
-    const uiCopy = getSiteUiCopy(locale);
+export default function HomePage() {
+    const app = getAppBySlug("verbik", "en");
+    const uiCopy = getSiteUiCopy("en");
 
     if (!app) {
         throw new Error("Verbik configuration is missing");
     }
 
-    for (const imageSrc of [app.iconImage, app.heroWallpaper, app.heroPreview, ...app.galleryImages, ...(app.detailFeatures?.map((feature) => feature.imageSrc) ?? [])]) {
-        preload(imageSrc, { as: "image" });
-    }
+    preload(app.heroWallpaper, { as: "image", fetchPriority: "high" });
 
-    const pageUrl = new URL(locale === "es" ? "/?lang=es" : "/", studio.siteUrl).toString();
+    const pageUrl = new URL("/", studio.siteUrl).toString();
     const softwareApplicationSchema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         name: app.appName,
         description: app.description,
         applicationCategory: "ReferenceApplication",
-        operatingSystem: "iOS 17 or later",
+        operatingSystem: "iOS 17.0 or later",
         url: pageUrl,
         downloadUrl: app.appStoreUrl,
+        sameAs: app.appStoreUrl,
         image: new URL(app.iconImage, studio.siteUrl).toString(),
-        offers: {
-            "@type": "Offer",
-            price: "14.99",
-            priceCurrency: "USD",
-        },
+        screenshot: app.galleryImages.map((image) => new URL(image, studio.siteUrl).toString()),
+        softwareVersion: "1.2",
+        featureList: app.features.map((feature) => feature.title),
+        offers: [
+            {
+                "@type": "Offer",
+                name: "Verbik",
+                price: "0",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+            },
+            {
+                "@type": "Offer",
+                name: "Verbik Pro Lifetime",
+                price: "14.99",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+            },
+        ],
         publisher: {
-            "@type": "Organization",
-            name: studio.organizationName,
+            "@type": "Person",
+            name: studio.developerName,
             url: studio.siteUrl,
         },
+    };
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Verbik",
+        url: studio.siteUrl,
+        description: app.description,
+        inLanguage: "en-US",
+    };
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: (app.faqItems ?? []).map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
     };
 
     return (
         <div style={{ "--accent": app.accentColor, "--accent-light": app.accentColorLight } as React.CSSProperties}>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
+            {[softwareApplicationSchema, websiteSchema, faqSchema].map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
             <Hero app={app} copy={uiCopy.hero} downloadLabel={uiCopy.downloadCta.buttonLabel} />
             <ProblemPain app={app} />
             <HowItWorks app={app} copy={uiCopy.workflow} />
             <FeatureGrid app={app} />
+            <LanguageDictionaryLinks />
             <SocialProof app={app} />
             <FeatureShowcase app={app} />
             <FAQ app={app} />

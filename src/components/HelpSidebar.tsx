@@ -2,9 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { apps } from "../config/apps";
 import { CaretDown } from "@phosphor-icons/react";
 import { useState } from "react";
+
+const sections = [
+    ["Getting started", "getting-started"],
+    ["Searching forms", "search"],
+    ["Offline & privacy", "offline"],
+    ["Pronunciation", "pronunciation"],
+    ["Favorites & iCloud", "favorites"],
+    ["Verbik Pro", "pro"],
+    ["Troubleshooting", "troubleshooting"],
+    ["Corrections", "corrections"],
+] as const;
 
 export function HelpSidebar() {
     const pathname = usePathname();
@@ -26,8 +36,8 @@ export function HelpSidebar() {
             <aside
                 className={`mt-3 md:mt-0 md:sticky md:top-6 rounded-3xl bg-gray-50 shadow-outline p-5 md:p-6 ${isOpen ? "block" : "hidden md:block"}`}
             >
-                <div className="mb-6 md:mb-8">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3">General</p>
+                <div>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-zinc-500">Verbik help</p>
                     <Link
                         href="/help"
                         onClick={handleNavigate}
@@ -36,44 +46,18 @@ export function HelpSidebar() {
                             : "text-zinc-600 hover:bg-white"
                             }`}
                     >
-                        Overview
+                        Help overview
                     </Link>
-                </div>
-
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3">Apps</p>
-                    <div className="space-y-2">
-                        {apps.map((app) => {
-                            const active = pathname === `/help/${app.slug}`;
-                            return (
-                                <Link
-                                    key={app.slug}
-                                    href={`/help/${app.slug}`}
-                                    onClick={handleNavigate}
-                                    className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm transition ${active
-                                        ? "bg-white shadow-outline text-zinc-900"
-                                        : "text-zinc-600 hover:bg-white"
-                                        }`}
-                                >
-                                    <img src={app.iconImage} alt={`${app.appName} icon`} width={16} height={16} className="rounded-[5px]" />
-                                    <span className="truncate">{app.appName}</span>
-                                </Link>
-                            );
-                        })}
+                    <div className="mt-2 space-y-1">
+                        {sections.map(([label, anchor]) => (
+                            <Link key={anchor} href={`/help#${anchor}`} onClick={handleNavigate} className="block rounded-full px-4 py-2 text-sm text-zinc-600 transition hover:bg-white hover:text-zinc-900">
+                                {label}
+                            </Link>
+                        ))}
                     </div>
 
                     <div className="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-gray-200">
                         <div className="space-y-2">
-                            <Link
-                                href="/help"
-                                onClick={handleNavigate}
-                                className={`block rounded-full px-4 py-2 text-sm transition ${pathname === "/help"
-                                    ? "bg-white shadow-outline text-zinc-900"
-                                    : "text-zinc-600 hover:bg-white"
-                                    }`}
-                            >
-                                Help
-                            </Link>
                             <Link
                                 href="/privacy"
                                 onClick={handleNavigate}

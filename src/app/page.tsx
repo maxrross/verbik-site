@@ -55,7 +55,7 @@ export default function HomePage() {
             },
         ],
         publisher: {
-            "@type": "Person",
+            "@type": "Organization",
             name: studio.developerName,
             url: studio.siteUrl,
         },

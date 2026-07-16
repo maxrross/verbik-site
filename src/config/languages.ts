@@ -26,8 +26,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search any Spanish verb form offline on iPhone. Verbik finds the infinitive and shows conjugations, meanings, pronunciation, examples, nouns, and adjectives.",
         heading: "A Spanish verb dictionary for the form you actually found",
         intro: "Look up an infinitive, conjugated verb, English meaning, noun, or adjective. Verbik connects the form to its dictionary entry and keeps the full reference available offline.",
-        image: "/apps/verbik/app-home-spanish-framed.png",
-        imageAlt: "Verbik Spanish verb dictionary search screen on iPhone",
+        image: "/apps/verbik/app-verbik-home-spanish-framed.png",
+        imageAlt: "Verbik Spanish dictionary home screen in the app's iPhone frame",
         searchExamples: [
             { query: "hablo", result: "hablar", explanation: "Find the infinitive from a first-person present form." },
             { query: "sepa", result: "saber", explanation: "Trace a subjunctive form back to the complete entry." },
@@ -55,8 +55,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search Russian verb forms, cases, meanings, or transliteration offline on iPhone. See stress, aspect, conjugations, declensions, pronunciation, and examples.",
         heading: "A Russian verb dictionary that understands inflected forms",
         intro: "Search the Cyrillic form in front of you, type a transliteration, or start with an English meaning. Verbik shows the lemma, stress, grammar, and the reason the result matched.",
-        image: "/apps/verbik/app-conjugation-framed.png",
-        imageAlt: "Verbik Russian verb conjugation and stress screen on iPhone",
+        image: "/apps/verbik/app-verbik-home-russian-framed.png",
+        imageAlt: "Verbik Russian dictionary home screen in the app's iPhone frame",
         searchExamples: [
             { query: "говорю", result: "говорить", explanation: "Find a verb from the form used for “I speak.”" },
             { query: "книги", result: "книга", explanation: "Resolve an ambiguous case or plural form to its noun entry." },
@@ -84,8 +84,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search Italian conjugated forms offline on iPhone. Verbik finds the infinitive and shows complete verb tables, meanings, pronunciation, examples, nouns, and adjectives.",
         heading: "An Italian verb dictionary for conjugations and real word forms",
         intro: "Start with the Italian form you encountered or an English meaning. Verbik identifies the dictionary entry, explains the match, and puts the full conjugation beside definitions and examples.",
-        image: "/apps/verbik/02-full-conjugation.jpg",
-        imageAlt: "Verbik Italian verb conjugation tables on iPhone",
+        image: "/apps/verbik/app-verbik-home-italian-framed.png",
+        imageAlt: "Verbik Italian dictionary home screen in the app's iPhone frame",
         searchExamples: [
             { query: "andiamo", result: "andare", explanation: "Jump from a present-tense form to the full verb entry." },
             { query: "sono", result: "essere", explanation: "Find an irregular verb even when the form looks unlike its infinitive." },
@@ -113,8 +113,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search Hebrew with or without niqqud offline on iPhone. See infinitives, binyanim, roots, conjugations, transliteration, pronunciation, meanings, and examples.",
         heading: "A Hebrew verb dictionary built around roots, binyanim, and real forms",
         intro: "Search vocalized or unvocalized Hebrew, a conjugated form, transliteration, or an English meaning. Verbik connects the result to its infinitive and makes the root and binyan easy to inspect.",
-        image: "/apps/verbik/04-pronunciation-and-niqqud.jpg",
-        imageAlt: "Verbik Hebrew verb dictionary with niqqud and transliteration on iPhone",
+        image: "/apps/verbik/app-verbik-home-hebrew-framed.png",
+        imageAlt: "Verbik Hebrew dictionary home screen in the app's iPhone frame",
         searchExamples: [
             { query: "לומד", result: "ללמוד", explanation: "Find the infinitive from a present-tense form." },
             { query: "ואכלתי", result: "לאכול", explanation: "Handle common attached Hebrew prefixes and a conjugated past form." },

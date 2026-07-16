@@ -1,7 +1,7 @@
 export const studio = {
     name: "Verbik",
     organizationName: "Verbik",
-    developerName: "Max Ross",
+    developerName: "Verbik",
     headline: "Verbik",
     subheadline: "Every word form. Four languages. Offline.",
     supportEmail: "support@verbik.app",

@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --surface: #f9fafb;
+    --text-primary: #171717;
+    --text-secondary: #52525b;
+    --accent: #3d54ca;
+    --accent-light: #edf2ff;
+    --page-height-min: calc(100dvh - 10rem);
+}
+
+@theme inline {
+    --color-border: #e5e7eb;
+    --color-background: var(--background);
+    --color-surface: var(--surface);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-accent: var(--accent);
+    --color-accent-light: var(--accent-light);
+    --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.full-height {
+    min-height: var(--page-height-min);
+}
+
+.shadow-outline {
+    --tw-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-outline-bright {
+    --tw-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-outline-superbright {
+    --tw-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+    --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.text-shadow {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text-replay {
+    color: #1B4D3E;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes float-soft {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-gentle {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow-shift {
+    0% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0.45;
+    }
+}
+
+.animate-float-soft {
+    animation: float-soft 7s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+    animation: float-gentle 5.5s ease-in-out infinite;
+}
+
+.animate-glow-shift {
+    animation: glow-shift 4.8s ease-in-out infinite;
+}

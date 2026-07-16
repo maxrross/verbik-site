@@ -72,12 +72,12 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                         <div className="mb-5 text-5xl" aria-hidden="true">{page.flag}</div>
                         <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">{page.heading}</h1>
                         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-600 sm:text-xl">{page.intro}</p>
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             <a
                                 href={app.appStoreUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-3 rounded-xl bg-black px-6 py-4 font-semibold text-white transition hover:bg-zinc-800"
+                                className="inline-flex shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-xl bg-black px-6 py-4 font-semibold text-white transition hover:bg-zinc-800"
                                 style={{ color: "#fff" }}
                             >
                                 <img src="/icons/apple-logo-white.svg" alt="" aria-hidden="true" className="h-5 w-5" />

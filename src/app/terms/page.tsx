@@ -26,7 +26,7 @@ export default function TermsPage() {
                     <section>
                         <h2 className="mb-2 text-xl font-semibold text-zinc-900">What Verbik provides</h2>
                         <p>
-                            Verbik is a language-reference app for searching Russian, Spanish, Italian, French, European Portuguese, and Hebrew words and forms, viewing definitions and grammar, listening to pronunciation, and saving favorites and recents. It is a reference tool, not a course, translator for every sentence, or guarantee of linguistic correctness.
+                            Verbik is a language-reference app for searching Russian, Spanish, Italian, and Hebrew words and forms, viewing definitions and grammar, listening to pronunciation, and saving favorites and recents. It is a reference tool, not a course, translator for every sentence, or guarantee of linguistic correctness.
                         </p>
                     </section>
 

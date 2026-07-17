@@ -65,7 +65,6 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
             name: page.title,
             description: page.description,
             url: pageUrl,
-            citation: page.sourceUrl,
             isPartOf: { "@type": "WebSite", name: "Verbik", url: studio.siteUrl },
             about: {
                 "@type": "SoftwareApplication",
@@ -198,18 +197,7 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                         <span className="mt-1 block text-sm text-zinc-600">core search and grammar</span>
                     </div>
                 </div>
-                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.3 and may grow in later dictionary updates.</p>
-                {page.sourceSummary && (
-                    <aside className="mx-auto mt-6 max-w-4xl rounded-2xl border border-violet-200 bg-violet-50 p-5 text-sm leading-relaxed text-zinc-700 sm:p-6">
-                        <strong className="block text-base text-zinc-900">Source-backed dictionary data</strong>
-                        <p className="mt-2">{page.sourceSummary}</p>
-                        {page.sourceUrl && (
-                            <a href={page.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex font-semibold text-[#5A00F5] hover:underline">
-                                View the pinned source provider
-                            </a>
-                        )}
-                    </aside>
-                )}
+                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.2 and may grow in later dictionary updates.</p>
             </section>
 
             <section className="container py-14 sm:py-20">

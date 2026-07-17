@@ -3,7 +3,7 @@ export const studio = {
     organizationName: "Verbik",
     developerName: "Verbik",
     headline: "Verbik",
-    subheadline: "Every word form. Six languages. Offline.",
+    subheadline: "Every word form. Four languages. Offline.",
     supportEmail: "support@verbik.app",
     logoPath: "/app-icons/verbik.png",
     siteUrl: "https://verbik.app",

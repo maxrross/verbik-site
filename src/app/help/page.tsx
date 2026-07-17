@@ -39,7 +39,7 @@ export default function HelpIndex() {
                 <section id="getting-started" className="scroll-mt-24 rounded-2xl bg-white p-5 shadow-outline sm:p-6">
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Getting started</h2>
                     <ol className="list-decimal space-y-2 pl-5 text-zinc-600">
-                        <li>Open Search and choose Russian, Spanish, Italian, French, European Portuguese, or Hebrew.</li>
+                        <li>Open Search and choose Russian, Spanish, Italian, or Hebrew.</li>
                         <li>Choose the language in which you want definitions where translated glosses are available.</li>
                         <li>Type a headword, conjugated or declined form, transliteration, or meaning.</li>
                         <li>Open a result to see why it matched, then review grammar, pronunciation, examples, frequency, and related entries.</li>
@@ -51,7 +51,7 @@ export default function HelpIndex() {
                 <section id="search" className="scroll-mt-24 rounded-2xl bg-white p-5 shadow-outline sm:p-6">
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Searching word forms</h2>
                     <ul className="list-disc space-y-2 pl-5 text-zinc-600">
-                        <li><strong className="text-zinc-800">Spanish, Italian, French, and European Portuguese:</strong> enter a conjugated form to find its infinitive and complete verb table.</li>
+                        <li><strong className="text-zinc-800">Spanish and Italian:</strong> enter a conjugated form to find its infinitive and complete verb table.</li>
                         <li><strong className="text-zinc-800">Russian:</strong> search Cyrillic, an inflected form, an English meaning, or learner transliteration.</li>
                         <li><strong className="text-zinc-800">Hebrew:</strong> search with or without niqqud, common typed apostrophes, attached prefixes, or transliteration.</li>
                         <li><strong className="text-zinc-800">Meanings:</strong> use a translated meaning when you do not know the headword.</li>
@@ -62,7 +62,7 @@ export default function HelpIndex() {
                 <section id="offline" className="scroll-mt-24 rounded-2xl border border-violet-200 bg-violet-50 p-5 sm:p-6">
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Offline use and privacy</h2>
                     <ul className="list-disc space-y-2 pl-5 text-zinc-700">
-                        <li>The six dictionaries, search index, grammar tables, favorites, recents, and synthetic speech are bundled or processed on-device.</li>
+                        <li>The four dictionaries, search index, grammar tables, favorites, recents, and synthetic speech are bundled or processed on-device.</li>
                         <li>Verbik has no account, ads, or third-party tracking SDK.</li>
                         <li>Favorites, recent entries, and language choices may sync through your Apple iCloud account.</li>
                         <li>Purchases, optional native audio, and feedback require a network connection.</li>

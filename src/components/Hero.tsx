@@ -247,7 +247,10 @@ export function Hero({
             </motion.div>
 
             <div className="relative flex flex-col items-center gap-5 sm:gap-6 text-center -mt-1 sm:-mt-2">
-                <motion.small className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs" style={{ color: app.accentColor }}>
+                <motion.small
+                    className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
+                >
                     {copy.overviewLabel}
                 </motion.small>
 

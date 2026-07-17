@@ -2,6 +2,7 @@ export interface DictionaryPageConfig {
     slug: string;
     name: string;
     flag: string;
+    scriptGlyph: string;
     entryCount: number;
     verbCount: number;
     title: string;
@@ -23,6 +24,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "spanish-verb-dictionary",
         name: "Spanish",
         flag: "🇪🇸",
+        scriptGlyph: "Ñ",
         entryCount: 26490,
         verbCount: 6003,
         title: "Spanish Verb Dictionary App — Offline Conjugations",
@@ -52,6 +54,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "russian-verb-dictionary",
         name: "Russian",
         flag: "🇷🇺",
+        scriptGlyph: "Я",
         entryCount: 39760,
         verbCount: 11546,
         title: "Russian Verb Dictionary App — Stress, Cases & Forms",
@@ -81,6 +84,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "italian-verb-dictionary",
         name: "Italian",
         flag: "🇮🇹",
+        scriptGlyph: "È",
         entryCount: 26707,
         verbCount: 8569,
         title: "Italian Verb Dictionary App — Offline Conjugations",
@@ -110,6 +114,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "french-verb-dictionary",
         name: "French",
         flag: "🇫🇷",
+        scriptGlyph: "Ç",
         entryCount: 22500,
         verbCount: 4000,
         title: "French Verb Dictionary App — Offline Conjugations",
@@ -142,6 +147,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "portuguese-verb-dictionary",
         name: "European Portuguese",
         flag: "🇵🇹",
+        scriptGlyph: "Ã",
         entryCount: 21500,
         verbCount: 3000,
         title: "European Portuguese Verb Dictionary — Offline Forms",
@@ -174,6 +180,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         slug: "hebrew-verb-dictionary",
         name: "Hebrew",
         flag: "🇮🇱",
+        scriptGlyph: "א",
         entryCount: 13138,
         verbCount: 4292,
         title: "Hebrew Verb Dictionary App — Binyanim, Roots & Niqqud",

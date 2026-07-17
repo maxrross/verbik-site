@@ -3,6 +3,7 @@
 import { AppConfig } from "../config/apps";
 import { CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { motion } from "framer-motion";
+import { twilightPanelBackground } from "./panelStyles";
 
 export function ProblemPain({ app }: { app: AppConfig }) {
     if (!app.painPoints?.length || !app.solutions?.length) {
@@ -11,10 +12,10 @@ export function ProblemPain({ app }: { app: AppConfig }) {
 
     return (
         <section className="container py-16 sm:py-20 md:py-24 text-center">
-            <div className="flex flex-col items-center gap-6 sm:gap-8 mb-12 sm:mb-16">
+            <div className="flex flex-col items-center gap-6 sm:gap-8 mb-10 sm:mb-14">
                 <small
-                    className="inline-flex gap-2 font-semibold uppercase tracking-wider"
-                    style={{ color: app.accentColor }}
+                    className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
                 >
                     Why This Exists
                 </small>
@@ -23,19 +24,22 @@ export function ProblemPain({ app }: { app: AppConfig }) {
                 </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-col rounded-3xl text-[#750D0D] bg-gradient-to-b from-[#FDF5F5] to-[#FBE7E7] shadow-outline"
-                >
-                    <div className="flex flex-col gap-6 sm:gap-7 p-6 sm:p-8 md:p-11 lg:p-12">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-left">
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.55 }}
+                className="relative overflow-hidden rounded-3xl text-left shadow-[0_28px_60px_rgba(23,5,56,0.3)]"
+                style={{ background: twilightPanelBackground }}
+            >
+                <span className="absolute inset-0 rounded-3xl shadow-outline-superbright pointer-events-none" />
+
+                <div className="relative grid md:grid-cols-2">
+                    <div className="flex flex-col gap-6 sm:gap-7 p-6 sm:p-8 md:p-11 lg:p-12 border-b border-white/10 md:border-b-0 md:border-r">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white/50">
                             Without {app.appName}
                         </h3>
-                        <ul className="space-y-4 md:space-y-5 text-left">
+                        <ul className="space-y-4 md:space-y-5">
                             {app.painPoints.map((pain, i) => (
                                 <motion.li
                                     key={pain}
@@ -43,31 +47,20 @@ export function ProblemPain({ app }: { app: AppConfig }) {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.35, delay: 0.1 + i * 0.07 }}
-                                    className="flex items-start gap-3.5 text-sm sm:text-base md:text-[1.1rem] leading-relaxed"
+                                    className="flex items-start gap-3.5 text-sm sm:text-base md:text-[1.1rem] leading-relaxed text-[#B4A6E3]"
                                 >
-                                    <XCircle weight="fill" className="w-5 h-5 mt-1 shrink-0 text-[#EF4444]" />
+                                    <XCircle weight="fill" className="w-5 h-5 mt-1 shrink-0 text-white/30" />
                                     <span>{pain}</span>
                                 </motion.li>
                             ))}
                         </ul>
                     </div>
-                </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.5, delay: 0.15 }}
-                    className="flex flex-col rounded-3xl text-zinc-800 shadow-outline"
-                    style={{
-                        background: `linear-gradient(to bottom, ${app.accentColorLight} 0%, ${app.accentColor}18 100%)`,
-                    }}
-                >
                     <div className="flex flex-col gap-6 sm:gap-7 p-6 sm:p-8 md:p-11 lg:p-12">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-left">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white">
                             With {app.appName}
                         </h3>
-                        <ul className="space-y-4 md:space-y-5 text-left">
+                        <ul className="space-y-4 md:space-y-5">
                             {app.solutions.map((solution, i) => (
                                 <motion.li
                                     key={solution}
@@ -75,16 +68,16 @@ export function ProblemPain({ app }: { app: AppConfig }) {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.35, delay: 0.25 + i * 0.07 }}
-                                    className="flex items-start gap-3.5 text-sm sm:text-base md:text-[1.1rem] leading-relaxed"
+                                    className="flex items-start gap-3.5 text-sm sm:text-base md:text-[1.1rem] leading-relaxed text-white/95"
                                 >
-                                    <CheckCircle weight="fill" className="w-5 h-5 mt-1 shrink-0" style={{ color: app.accentColor }} />
+                                    <CheckCircle weight="fill" className="w-5 h-5 mt-1 shrink-0 text-[#FF6A3D]" />
                                     <span>{solution}</span>
                                 </motion.li>
                             ))}
                         </ul>
                     </div>
-                </motion.div>
-            </div>
+                </div>
+            </motion.div>
         </section>
     );
 }

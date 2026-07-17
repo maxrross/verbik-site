@@ -19,8 +19,8 @@ export function PrivacyBadge({ message, app }: { message?: string; app?: AppConf
                 </div>
                 <div className="flex-1">
                     <small
-                        className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs mb-3"
-                        style={{ color: accentColor }}
+                        className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs mb-3"
+                        style={{ color: accentColor, backgroundColor: app?.accentColorLight ?? "#F1ECFF" }}
                     >
                         Privacy
                     </small>

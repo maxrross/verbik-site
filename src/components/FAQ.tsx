@@ -10,8 +10,8 @@ export function FAQ({ app }: { app: AppConfig }) {
         <section className="container py-16 sm:py-20 md:py-24">
             <div className="flex flex-col items-center gap-6 sm:gap-8 mb-12 sm:mb-14 text-center">
                 <small
-                    className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs"
-                    style={{ color: app.accentColor }}
+                    className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
                 >
                     Support
                 </small>
@@ -24,7 +24,10 @@ export function FAQ({ app }: { app: AppConfig }) {
                         <details key={item.question} className="bg-white rounded-2xl shadow-outline px-4 sm:px-5 py-4 md:px-6 md:py-5 group">
                             <summary className="cursor-pointer list-none flex items-center justify-between gap-4 text-zinc-900 font-semibold text-base sm:text-lg">
                                 <span>{item.question}</span>
-                                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 shadow-outline text-zinc-500 group-open:rotate-45 transition-transform">
+                                <span
+                                    className="inline-flex items-center justify-center w-8 h-8 rounded-full shadow-outline group-open:rotate-45 transition-transform"
+                                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
+                                >
                                     +
                                 </span>
                             </summary>
@@ -36,7 +39,7 @@ export function FAQ({ app }: { app: AppConfig }) {
                 <div className="mt-5 rounded-2xl bg-white shadow-outline p-5 sm:p-6 text-left">
                     <h3 className="text-xl sm:text-2xl font-semibold text-zinc-900 mb-2">Still stuck?</h3>
                     <p className="text-zinc-600 leading-relaxed">
-                        Email <a className="font-medium text-zinc-900" href={`mailto:${studio.supportEmail}`}>{studio.supportEmail}</a> and include
+                        Email <a className="font-medium" style={{ color: app.accentColor }} href={`mailto:${studio.supportEmail}`}>{studio.supportEmail}</a> and include
                         your iOS version, device model, and what happened.
                     </p>
                 </div>

@@ -9,8 +9,8 @@ export function SocialProof({ app }: { app: AppConfig }) {
         <section className="container py-16 sm:py-20 md:py-24 text-center">
             <div className="flex flex-col items-center gap-5 sm:gap-6 mb-12 sm:mb-14">
                 <small
-                    className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs"
-                    style={{ color: app.accentColor }}
+                    className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
                 >
                     Loved By
                 </small>

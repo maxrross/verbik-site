@@ -12,8 +12,8 @@ export function FeatureShowcase({ app }: { app: AppConfig }) {
         <section className="container py-16 sm:py-20 md:py-24" style={{ contentVisibility: "auto", containIntrinsicSize: "auto 600px" }}>
             <div className="flex flex-col items-center text-center gap-6 sm:gap-8 mb-12 sm:mb-16">
                 <small
-                    className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs"
-                    style={{ color: app.accentColor }}
+                    className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
                 >
                     Deep Dive
                 </small>
@@ -30,8 +30,8 @@ export function FeatureShowcase({ app }: { app: AppConfig }) {
                         >
                             <div className="flex flex-col gap-4 sm:gap-5">
                                 <small
-                                    className="inline-flex gap-2 font-semibold uppercase tracking-wider text-xs"
-                                    style={{ color: app.accentColor }}
+                                    className="self-start inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-semibold uppercase tracking-wider text-xs"
+                                    style={{ color: app.accentColor, backgroundColor: app.accentColorLight }}
                                 >
                                     Use Case {index + 1}
                                 </small>

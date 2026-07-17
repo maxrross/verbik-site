@@ -37,7 +37,7 @@ export default function PrivacyPage() {
                     <section>
                         <h2 className="mb-2 text-xl font-semibold text-zinc-900">Core dictionary use</h2>
                         <p>
-                            Verbik&apos;s Russian, Spanish, Italian, and Hebrew dictionary database is bundled with the app. Search queries, viewed entries, grammar tables, and synthetic text-to-speech are processed locally. We do not receive those searches or maintain a server-side search history.
+                            Verbik&apos;s Russian, Spanish, Italian, French, European Portuguese, and Hebrew dictionary database is bundled with the app. Search queries, viewed entries, grammar tables, and synthetic text-to-speech are processed locally. We do not receive those searches or maintain a server-side search history.
                         </p>
                     </section>
 

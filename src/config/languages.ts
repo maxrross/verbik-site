@@ -10,6 +10,9 @@ export interface DictionaryPageConfig {
     intro: string;
     image: string;
     imageAlt: string;
+    imageIsRaw?: boolean;
+    sourceSummary?: string;
+    sourceUrl?: string;
     searchExamples: Array<{ query: string; result: string; explanation: string }>;
     grammarFeatures: Array<{ title: string; description: string }>;
     faq: Array<{ question: string; answer: string }>;
@@ -42,7 +45,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can Verbik find an infinitive from a conjugated Spanish verb?", answer: "Yes. Search is built to match inflected forms and return the underlying dictionary entry with a label explaining the match." },
             { question: "Does the Spanish verb dictionary work offline?", answer: "Yes. Search, entries, grammar tables, favorites, and synthetic pronunciation are available offline. Optional native-speaker recordings require a connection when available." },
-            { question: "How many Spanish entries are included?", answer: "Version 1.2 includes 26,490 Spanish entries, including 6,003 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Spanish entries are included?", answer: "Version 1.3 includes 26,490 Spanish entries, including 6,003 verbs. Dictionary counts can increase in later updates." },
         ],
     },
     {
@@ -71,7 +74,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can I search Russian with Latin letters?", answer: "Yes. Verbik supports transliteration search in addition to Cyrillic, English meanings, headwords, and inflected forms." },
             { question: "Does Verbik show Russian stress?", answer: "Yes. Russian entries and many forms include source-based stress marks and transliteration where available." },
-            { question: "How many Russian entries are included?", answer: "Version 1.2 includes 39,760 Russian entries, including 11,546 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Russian entries are included?", answer: "Version 1.3 includes 39,760 Russian entries, including 11,546 verbs. Dictionary counts can increase in later updates." },
         ],
     },
     {
@@ -100,7 +103,71 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can Verbik identify irregular Italian verb forms?", answer: "Yes. Inflected-form search is designed to connect regular and irregular forms to the correct dictionary entry." },
             { question: "Can I search Italian words by their English meaning?", answer: "Yes. Verbik searches English meanings as well as Italian headwords and inflected forms." },
-            { question: "How many Italian entries are included?", answer: "Version 1.2 includes 26,707 Italian entries, including 8,569 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Italian entries are included?", answer: "Version 1.3 includes 26,707 Italian entries, including 8,569 verbs. Dictionary counts can increase in later updates." },
+        ],
+    },
+    {
+        slug: "french-verb-dictionary",
+        name: "French",
+        flag: "🇫🇷",
+        entryCount: 22500,
+        verbCount: 4000,
+        title: "French Verb Dictionary App — Offline Conjugations",
+        description: "Search French conjugated forms offline on iPhone. Verbik finds the infinitive and shows sourced meanings, complete verb tables, pronunciation, examples, nouns, and adjectives.",
+        heading: "A French verb dictionary that starts with the form you found",
+        intro: "Search a French headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the dictionary entry, explains the match, and keeps the complete reference available offline.",
+        image: "/apps/verbik/app-verbik-home-french.png",
+        imageAlt: "Verbik French dictionary home screen on iPhone",
+        imageIsRaw: true,
+        sourceSummary: "Meanings, grammatical forms, examples, usage labels, IPA, and pronunciation records trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
+        sourceUrl: "https://kaikki.org/dictionary/rawdata.html",
+        searchExamples: [
+            { query: "parlons", result: "parler", explanation: "Find parler from the nous present form and see exactly why it matched." },
+            { query: "était", result: "être", explanation: "Trace an irregular imperfect form back to the complete être entry." },
+            { query: "une", result: "un", explanation: "Resolve a feminine inflected form to its source-backed dictionary entry." },
+        ],
+        grammarFeatures: [
+            { title: "Six core French conjugation tables", description: "Review present, imperfect, simple past, future, conditional, and present subjunctive forms for six persons." },
+            { title: "Commands and non-finite forms", description: "Keep imperative forms, the present participle or gerund, and past participle with the main entry." },
+            { title: "Nouns, adjectives, and real forms", description: "Search gendered nouns, plurals, adjective forms, meanings, examples, frequency, and pronunciation." },
+            { title: "Pinned sources and offline access", description: "Every displayed field retains source provenance, while the bundled dictionary and synthetic pronunciation remain available offline." },
+        ],
+        faq: [
+            { question: "Can Verbik find a French infinitive from a conjugated form?", answer: "Yes. Inflected-form search connects regular and irregular French forms to the dictionary entry and labels the person and tense that matched." },
+            { question: "Are the French meanings and forms sourced?", answer: "Yes. Version 1.3 retains field-level provenance to pinned Kaikki/Wiktextract records from English Wiktionary, and uses wordfreq 3.1.1 for corpus-frequency ordering." },
+            { question: "How many French entries are included?", answer: "Version 1.3 includes 22,500 French entries, including 4,000 verbs. Dictionary counts can increase in later updates." },
+        ],
+    },
+    {
+        slug: "portuguese-verb-dictionary",
+        name: "European Portuguese",
+        flag: "🇵🇹",
+        entryCount: 21500,
+        verbCount: 3000,
+        title: "European Portuguese Verb Dictionary — Offline Forms",
+        description: "Search European Portuguese conjugated forms offline on iPhone. Verbik finds the infinitive and shows sourced meanings, complete grammar, pronunciation, examples, nouns, and adjectives.",
+        heading: "A European Portuguese dictionary for the form you actually saw",
+        intro: "Enter a European Portuguese headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the entry, explains the match, and keeps the full dictionary available offline.",
+        image: "/apps/verbik/app-verbik-home-portuguese.png",
+        imageAlt: "Verbik European Portuguese dictionary home screen on iPhone",
+        imageIsRaw: true,
+        sourceSummary: "Meanings, grammatical forms, examples, usage labels, IPA, and pronunciation records trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
+        sourceUrl: "https://kaikki.org/dictionary/rawdata.html",
+        searchExamples: [
+            { query: "falámos", result: "falar", explanation: "Find falar from the accented nós preterite used in European Portuguese." },
+            { query: "são", result: "ser", explanation: "Trace an irregular third-person plural present form to the complete ser entry." },
+            { query: "estamos", result: "estar", explanation: "Open estar from the nós present form and see the match label." },
+        ],
+        grammarFeatures: [
+            { title: "European Portuguese forms", description: "See source-backed spellings and accents such as nós falámos, with pt-PT language-aware pronunciation." },
+            { title: "Six core conjugation tables", description: "Review present, imperfect, preterite, future, conditional, and present subjunctive forms for six persons." },
+            { title: "Commands, gerunds, and participles", description: "Keep imperatives and non-finite forms beside the main conjugation instead of splitting them across references." },
+            { title: "Pinned sources and offline access", description: "Every displayed field retains source provenance, while the bundled dictionary and synthetic pronunciation remain available offline." },
+        ],
+        faq: [
+            { question: "Does Verbik use European Portuguese?", answer: "Yes. Version 1.3 presents European Portuguese conventions, including forms such as nós falámos, and uses the pt-PT speech locale." },
+            { question: "Are the Portuguese meanings and forms sourced?", answer: "Yes. Version 1.3 retains field-level provenance to pinned Kaikki/Wiktextract records from English Wiktionary, and uses wordfreq 3.1.1 for corpus-frequency ordering." },
+            { question: "How many Portuguese entries are included?", answer: "Version 1.3 includes 21,500 European Portuguese entries, including 3,000 verbs. Dictionary counts can increase in later updates." },
         ],
     },
     {
@@ -129,7 +196,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can I search Hebrew without niqqud?", answer: "Yes. Verbik normalizes niqqud-free searches and recognizes common Hebrew spelling and apostrophe variants." },
             { question: "Does Verbik show Hebrew roots and binyanim?", answer: "Yes. Verb entries show the root and binyan when source data is available, followed by past, present, future, imperative, and infinitive forms." },
-            { question: "How many Hebrew entries are included?", answer: "Version 1.2 includes 13,138 Hebrew entries, including 4,292 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Hebrew entries are included?", answer: "Version 1.3 includes 13,138 Hebrew entries, including 4,292 verbs. Dictionary counts can increase in later updates." },
         ],
     },
 ];

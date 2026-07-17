@@ -13,7 +13,7 @@ export function SiteFooter() {
                             <Image src={studio.logoPath} alt="" aria-hidden="true" width={24} height={24} className="rounded-[7px]" />
                             <span className="text-replay">Verbik</span>
                         </Link>
-                        <p className="mt-3 text-sm text-zinc-500">Offline word-form search and complete grammar for Russian, Spanish, Italian, and Hebrew.</p>
+                        <p className="mt-3 text-sm text-zinc-500">Offline word-form search and complete grammar for Russian, Spanish, Italian, French, European Portuguese, and Hebrew.</p>
                     </div>
 
                     <div className="grid gap-7 text-sm sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">

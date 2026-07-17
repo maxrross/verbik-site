@@ -7,15 +7,15 @@ export function LanguageDictionaryLinks() {
         <section id="dictionaries" className="container scroll-mt-24 py-16 sm:py-20 md:py-24">
             <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-14">
                 <small className="mb-5 inline-flex font-semibold uppercase tracking-wider text-[#5A00F5]">
-                    Four dictionaries
+                    Six sourced dictionaries
                 </small>
-                <h2 className="text-3xl font-bold text-zinc-900 md:text-5xl">One app for four different grammar systems</h2>
+                <h2 className="text-3xl font-bold text-zinc-900 md:text-5xl">One app for six language-specific grammar systems</h2>
                 <p className="mx-auto mt-5 max-w-3xl text-base text-zinc-600 sm:text-lg md:text-xl">
                     Each language gets its own search rules and grammar layout—not a generic table forced onto every word.
                 </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {dictionaryPages.map((page) => (
                     <Link
                         key={page.slug}

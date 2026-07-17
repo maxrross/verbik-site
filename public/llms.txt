@@ -1,6 +1,6 @@
 # Verbik
 
-> Verbik is an offline iPhone dictionary for Russian, Spanish, Italian, and Hebrew. It searches headwords, inflected word forms, transliterations, and meanings, then shows why a result matched and presents language-specific grammar.
+> Verbik is an offline iPhone dictionary for Russian, Spanish, Italian, French, European Portuguese, and Hebrew. It searches headwords, inflected word forms, transliterations, and meanings, then shows why a result matched and presents language-specific grammar.
 
 Official website: https://verbik.app
 App Store: https://apps.apple.com/us/app/verbik-verb-forms-dictionary/id6788358735
@@ -8,9 +8,11 @@ Support: mailto:support@verbik.app
 
 ## Product facts
 
-- Current website copy reflects Verbik 1.2.
+- Current website copy reflects Verbik 1.3.
 - Requires iOS 17.0 or later.
-- Includes 106,095 selectable-language entries: 39,760 Russian, 26,490 Spanish, 26,707 Italian, and 13,138 Hebrew.
+- Includes 150,095 selectable-language entries: 39,760 Russian, 26,490 Spanish, 26,707 Italian, 22,500 French, 21,500 European Portuguese, and 13,138 Hebrew.
+- French and Portuguese meanings, forms, examples, labels, IPA, and pronunciation records retain field-level provenance to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0.
+- French and Portuguese corpus-frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0. The app stores the selected source record, source line, URL, tags, and record hash in its release provenance manifest.
 - Core dictionaries, search, grammar tables, favorites, recents, and synthetic pronunciation work offline.
 - Optional native-speaker recordings may be downloaded from Wikimedia Commons.
 - No account, advertising, or third-party tracking SDK is required.
@@ -22,6 +24,8 @@ Support: mailto:support@verbik.app
 - Spanish verb dictionary: https://verbik.app/spanish-verb-dictionary
 - Russian verb dictionary: https://verbik.app/russian-verb-dictionary
 - Italian verb dictionary: https://verbik.app/italian-verb-dictionary
+- French verb dictionary: https://verbik.app/french-verb-dictionary
+- European Portuguese verb dictionary: https://verbik.app/portuguese-verb-dictionary
 - Hebrew verb dictionary: https://verbik.app/hebrew-verb-dictionary
 - Help: https://verbik.app/help
 - Privacy: https://verbik.app/privacy

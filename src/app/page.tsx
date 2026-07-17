@@ -36,7 +36,7 @@ export default function HomePage() {
         sameAs: app.appStoreUrl,
         image: new URL(app.iconImage, studio.siteUrl).toString(),
         screenshot: app.galleryImages.map((image) => new URL(image, studio.siteUrl).toString()),
-        softwareVersion: "1.2",
+        softwareVersion: "1.3",
         featureList: app.features.map((feature) => feature.title),
         offers: [
             {

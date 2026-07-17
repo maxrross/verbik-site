@@ -27,6 +27,7 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
             name: page.title,
             description: page.description,
             url: pageUrl,
+            citation: page.sourceUrl,
             isPartOf: { "@type": "WebSite", name: "Verbik", url: studio.siteUrl },
             about: {
                 "@type": "SoftwareApplication",
@@ -89,15 +90,31 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                     <div className="relative mx-auto w-full max-w-[390px] lg:max-w-[440px]">
                         <div className="absolute inset-8 rounded-full bg-[#5A00F5]/20 blur-3xl" />
                         <div className="relative mx-auto aspect-[920/2000] w-[74vw] max-w-[440px]">
-                            <Image
-                                src={page.image}
-                                alt={page.imageAlt}
-                                fill
-                                sizes="(max-width: 639px) 74vw, (max-width: 1023px) 390px, 440px"
-                                priority
-                                fetchPriority="high"
-                                className="object-contain drop-shadow-[0_24px_45px_rgba(0,0,0,0.28)]"
-                            />
+                            {page.imageIsRaw ? (
+                                <div className="absolute inset-0 rounded-[13%] bg-gradient-to-b from-zinc-700 via-black to-zinc-800 p-[1.5%] drop-shadow-[0_24px_45px_rgba(0,0,0,0.28)]">
+                                    <div className="relative h-full overflow-hidden rounded-[11.5%] bg-white">
+                                        <Image
+                                            src={page.image}
+                                            alt={page.imageAlt}
+                                            fill
+                                            sizes="(max-width: 639px) 74vw, (max-width: 1023px) 390px, 440px"
+                                            priority
+                                            fetchPriority="high"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </div>
+                            ) : (
+                                <Image
+                                    src={page.image}
+                                    alt={page.imageAlt}
+                                    fill
+                                    sizes="(max-width: 639px) 74vw, (max-width: 1023px) 390px, 440px"
+                                    priority
+                                    fetchPriority="high"
+                                    className="object-contain drop-shadow-[0_24px_45px_rgba(0,0,0,0.28)]"
+                                />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -118,7 +135,18 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                         <span className="mt-1 block text-sm text-zinc-600">core search and grammar</span>
                     </div>
                 </div>
-                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.2 and may grow in later dictionary updates.</p>
+                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.3 and may grow in later dictionary updates.</p>
+                {page.sourceSummary && (
+                    <aside className="mx-auto mt-6 max-w-4xl rounded-2xl border border-violet-200 bg-violet-50 p-5 text-sm leading-relaxed text-zinc-700 sm:p-6">
+                        <strong className="block text-base text-zinc-900">Source-backed dictionary data</strong>
+                        <p className="mt-2">{page.sourceSummary}</p>
+                        {page.sourceUrl && (
+                            <a href={page.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex font-semibold text-[#5A00F5] hover:underline">
+                                View the pinned source provider
+                            </a>
+                        )}
+                    </aside>
+                )}
             </section>
 
             <section className="container py-14 sm:py-20">

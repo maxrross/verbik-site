@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: "Verbik",
         short_name: "Verbik",
-        description: "Offline dictionary and grammar reference for Russian, Spanish, Italian, French, European Portuguese, and Hebrew.",
+        description: "Offline dictionary and grammar reference for Russian, Spanish, Italian, and Hebrew.",
         start_url: "/",
         display: "standalone",
         background_color: "#ffffff",

@@ -3,7 +3,7 @@ import { studio } from "../config/studio";
 import { dictionaryPages } from "../config/languages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date("2026-07-17T12:00:00-04:00");
+    const lastModified = new Date("2026-07-16T12:00:00-04:00");
     const baseRoutes: MetadataRoute.Sitemap = [
         {
             url: studio.siteUrl,

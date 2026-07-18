@@ -37,12 +37,12 @@ const demoScenariosBySlug: Record<string, DemoScenario[]> = {
     "french-verb-dictionary": [
         { flag: "🇫🇷", language: "French", query: "parlons", lemma: "parler", translation: "to speak, to talk", chips: ["present", "1st person plural"] },
         { flag: "🇫🇷", language: "French", query: "était", lemma: "être", translation: "to be", chips: ["imperfect", "irregular"] },
-        { flag: "🇫🇷", language: "French", query: "une", lemma: "un", translation: "a, an", chips: ["feminine"], pos: "article" },
+        { flag: "🇫🇷", language: "French", query: "allassions", lemma: "aller", translation: "to go", chips: ["imperfect subjunctive", "1st person plural"] },
     ],
     "portuguese-verb-dictionary": [
         { flag: "🇵🇹", language: "Portuguese", query: "falámos", lemma: "falar", translation: "to speak, to talk", chips: ["preterite", "1st person plural"] },
         { flag: "🇵🇹", language: "Portuguese", query: "são", lemma: "ser", translation: "to be", chips: ["present", "irregular"] },
-        { flag: "🇵🇹", language: "Portuguese", query: "estamos", lemma: "estar", translation: "to be", chips: ["present", "1st person plural"] },
+        { flag: "🇵🇹", language: "Portuguese", query: "fizéssemos", lemma: "fazer", translation: "to do, to make", chips: ["imperfect subjunctive", "1st person plural"] },
     ],
 };
 
@@ -65,6 +65,7 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
             name: page.title,
             description: page.description,
             url: pageUrl,
+            citation: page.sourceLinks?.map((source) => source.url),
             isPartOf: { "@type": "WebSite", name: "Verbik", url: studio.siteUrl },
             about: {
                 "@type": "SoftwareApplication",
@@ -197,7 +198,24 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                         <span className="mt-1 block text-sm text-zinc-600">core search and grammar</span>
                     </div>
                 </div>
-                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.2 and may grow in later dictionary updates.</p>
+                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.3 and may grow in later dictionary updates.</p>
+                {page.sourceSummary && (
+                    <aside className="mx-auto mt-6 max-w-4xl rounded-2xl border border-violet-200 bg-violet-50 p-5 text-sm leading-relaxed text-zinc-700 sm:p-6">
+                        <strong className="block text-base text-zinc-900">Source-backed dictionary data</strong>
+                        <p className="mt-2">{page.sourceSummary}</p>
+                        {page.sourceLinks && (
+                            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+                                {page.sourceLinks.map((source) => (
+                                    <li key={source.url}>
+                                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#5A00F5] hover:underline">
+                                            {source.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </aside>
+                )}
             </section>
 
             <section className="container py-14 sm:py-20">

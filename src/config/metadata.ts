@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { studio } from "./studio";
 
 export const defaultSiteTitle = "Verbik: Offline Verb Dictionary for iPhone";
-export const defaultSiteDescription = "An offline Spanish, Russian, Italian, and Hebrew verb dictionary for iPhone. Search any word form and see complete conjugation and grammar tables.";
+export const defaultSiteDescription = "An offline Russian, Spanish, Italian, French, European Portuguese, and Hebrew verb dictionary for iPhone. Search any word form and see complete grammar tables.";
 
 export function buildPageMetadata({
     title,

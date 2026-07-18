@@ -66,7 +66,7 @@ const SITE_UI_COPY: Record<SiteLocale, SiteUiCopy> = {
         hero: {
             overviewLabel: "Overview",
             defaultDownloadNote: "Free to download. One optional lifetime Pro unlock. No subscription.",
-            featureLinkDesktop: "{{appName}} — four offline dictionaries built for iPhone",
+            featureLinkDesktop: "{{appName}} — six sourced offline dictionaries built for iPhone",
             featureLinkMobile: "Explore features",
             appIconAlt: "{{appName}} icon",
             heroPreviewAlt: "{{appName}} hero preview",
@@ -81,7 +81,7 @@ const SITE_UI_COPY: Record<SiteLocale, SiteUiCopy> = {
         downloadCta: {
             eyebrow: "Get Started",
             title: "Ready to try {{appName}}?",
-            subtitle: "Search more than 106,000 Russian, Spanish, Italian, and Hebrew entries. No account required.",
+            subtitle: "Search more than 159,000 entries across six languages. No account required.",
             buttonLabel: "Download on the App Store",
         },
     },
@@ -91,9 +91,9 @@ export const apps: AppConfig[] = [
     {
         slug: "verbik",
         appName: "Verbik",
-        tagline: "Every word form. Four languages. Offline.",
+        tagline: "Every word form. Six languages. Offline.",
         description:
-            "Verbik is an offline verb dictionary for iPhone. Search more than 106,000 Russian, Spanish, Italian, and Hebrew entries by the form you actually see, understand the match, and open complete grammar tables.",
+            "Verbik is an offline verb dictionary for iPhone. Search more than 159,000 sourced Russian, Spanish, Italian, French, European Portuguese, and Hebrew entries by the form you actually see, understand the match, and open complete grammar tables.",
         accentColor: "#5A00F5",
         accentColorLight: "#F1ECFF",
         accentGradient: { from: "#24008F", via: "#5A00F5", to: "#FF4C1F" },
@@ -113,7 +113,7 @@ export const apps: AppConfig[] = [
         galleryImages: [
             "/apps/verbik/01-search-any-form.jpg",
             "/apps/verbik/02-full-conjugation.jpg",
-            "/apps/verbik/03-four-offline-dictionaries.jpg",
+            "/apps/verbik/03-six-offline-dictionaries.jpg",
             "/apps/verbik/04-pronunciation-and-niqqud.jpg",
             "/apps/verbik/05-lifetime-unlock.jpg",
         ],
@@ -126,8 +126,8 @@ export const apps: AppConfig[] = [
             },
             {
                 icon: "character.book.closed.fill",
-                title: "Four offline dictionaries",
-                body: "More than 106,000 Russian, Spanish, Italian, and Hebrew entries live together in one focused reference app.",
+                title: "Six sourced offline dictionaries",
+                body: "More than 159,000 Russian, Spanish, Italian, French, European Portuguese, and Hebrew entries live together in one focused reference app.",
             },
             {
                 icon: "textformat.abc",
@@ -153,7 +153,7 @@ export const apps: AppConfig[] = [
         steps: [
             {
                 title: "Choose a language",
-                description: "Switch between Russian, Spanish, Italian, and Hebrew from the search screen.",
+                description: "Switch between Russian, Spanish, Italian, French, European Portuguese, and Hebrew from the search screen.",
             },
             {
                 title: "Search the form you found",
@@ -186,14 +186,14 @@ export const apps: AppConfig[] = [
         ],
         solutions: [
             "Search headwords, meanings, inflections, and transliterations",
-            "Keep four full grammar dictionaries in one app",
+            "Keep six source-backed grammar dictionaries in one app",
             "Understand the match with language-specific labels",
             "Pay once for permanent access with no account or tracking",
         ],
         faqItems: [
             {
                 question: "Which languages does Verbik support?",
-                answer: "Verbik includes Russian, Spanish, Italian, and Hebrew dictionaries. Each language has its own grammar presentation and search support.",
+                answer: "Verbik includes Russian, Spanish, Italian, French, European Portuguese, and Hebrew dictionaries. Each language has its own grammar presentation, inflection-aware search, and cited sources.",
             },
             {
                 question: "Can I search a conjugated or declined word?",
@@ -201,11 +201,11 @@ export const apps: AppConfig[] = [
             },
             {
                 question: "Does Verbik work offline?",
-                answer: "Yes. The four core dictionaries, grammar entries, search, favorites, and synthetic pronunciation work offline. Native-speaker audio can be an optional online enhancement when available.",
+                answer: "Yes. All six core dictionaries, grammar entries, search, favorites, and synthetic pronunciation work offline. Native-speaker audio can be an optional online enhancement when available.",
             },
             {
                 question: "How much does Verbik cost?",
-                answer: "Verbik is free to download and includes a useful sample from every dictionary. A one-time $14.99 purchase unlocks all entries and all four dictionaries permanently. There is no trial or subscription.",
+                answer: "Verbik is free to download and includes a useful sample from every dictionary. A one-time $14.99 purchase unlocks all entries and all six dictionaries permanently. There is no trial or subscription.",
             },
             {
                 question: "Does Verbik support Hebrew niqqud and Russian stress?",

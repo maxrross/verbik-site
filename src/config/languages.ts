@@ -47,7 +47,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can Verbik find an infinitive from a conjugated Spanish verb?", answer: "Yes. Search is built to match inflected forms and return the underlying dictionary entry with a label explaining the match." },
             { question: "Does the Spanish verb dictionary work offline?", answer: "Yes. Search, entries, grammar tables, favorites, and synthetic pronunciation are available offline. Optional native-speaker recordings require a connection when available." },
-            { question: "How many Spanish entries are included?", answer: "Version 1.2 includes 26,490 Spanish entries, including 6,003 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Spanish entries are included?", answer: "Version 1.3 includes 26,490 Spanish entries, including 6,003 verbs. Dictionary counts can increase in later updates." },
         ],
     },
     {
@@ -77,7 +77,7 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can I search Russian with Latin letters?", answer: "Yes. Verbik supports transliteration search in addition to Cyrillic, English meanings, headwords, and inflected forms." },
             { question: "Does Verbik show Russian stress?", answer: "Yes. Russian entries and many forms include source-based stress marks and transliteration where available." },
-            { question: "How many Russian entries are included?", answer: "Version 1.2 includes 39,760 Russian entries, including 11,546 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Russian entries are included?", answer: "Version 1.3 includes 39,760 Russian entries, including 11,546 verbs. Dictionary counts can increase in later updates." },
         ],
     },
     {
@@ -107,46 +107,9 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         faq: [
             { question: "Can Verbik identify irregular Italian verb forms?", answer: "Yes. Inflected-form search is designed to connect regular and irregular forms to the correct dictionary entry." },
             { question: "Can I search Italian words by their English meaning?", answer: "Yes. Verbik searches English meanings as well as Italian headwords and inflected forms." },
-            { question: "How many Italian entries are included?", answer: "Version 1.2 includes 26,707 Italian entries, including 8,569 verbs. Dictionary counts can increase in later updates." },
+            { question: "How many Italian entries are included?", answer: "Version 1.3 includes 26,707 Italian entries, including 8,569 verbs. Dictionary counts can increase in later updates." },
         ],
     },
-    {
-        slug: "hebrew-verb-dictionary",
-        name: "Hebrew",
-        flag: "🇮🇱",
-        scriptGlyph: "א",
-        entryCount: 13138,
-        verbCount: 4292,
-        title: "Hebrew Verb Dictionary App — Binyanim, Roots & Niqqud",
-        description: "Search Hebrew with or without niqqud offline on iPhone. See infinitives, binyanim, roots, conjugations, transliteration, pronunciation, meanings, and examples.",
-        heading: "A Hebrew verb dictionary built around roots, binyanim, and real forms",
-        intro: "Search vocalized or unvocalized Hebrew, a conjugated form, transliteration, or an English meaning. Verbik connects the result to its infinitive and makes the root and binyan easy to inspect.",
-        image: "/apps/verbik/app-verbik-home-hebrew-framed.png",
-        imageAlt: "Verbik Hebrew dictionary home screen in the app's iPhone frame",
-        searchExamples: [
-            { query: "לומד", result: "ללמוד", explanation: "Find the infinitive from a present-tense form." },
-            { query: "ואכלתי", result: "לאכול", explanation: "Handle common attached Hebrew prefixes and a conjugated past form." },
-            { query: "lilmod", result: "ללמוד", explanation: "Search by transliteration without switching keyboards." },
-        ],
-        grammarFeatures: [
-            { title: "Niqqud-aware search", description: "Search Hebrew with or without vowel points and see vocalized forms where the source provides them." },
-            { title: "Roots and binyanim", description: "Keep the Hebrew root, binyan, learner-facing infinitive, and full entry together." },
-            { title: "Past, present, future, and more", description: "Review person, number, and gender forms plus imperatives and the infinitive." },
-            { title: "Transliteration and pronunciation", description: "Use learner-friendly romanization and listen with native audio when available or on-device speech fallback." },
-        ],
-        faq: [
-            { question: "Can I search Hebrew without niqqud?", answer: "Yes. Verbik normalizes niqqud-free searches and recognizes common Hebrew spelling and apostrophe variants." },
-            { question: "Does Verbik show Hebrew roots and binyanim?", answer: "Yes. Verb entries show the root and binyan when source data is available, followed by past, present, future, imperative, and infinitive forms." },
-            { question: "How many Hebrew entries are included?", answer: "Version 1.2 includes 13,138 Hebrew entries, including 4,292 verbs. Dictionary counts can increase in later updates." },
-        ],
-    },
-];
-
-
-// Ready for release but intentionally unpublished: these two dictionaries stay off the
-// site until the Verbik 1.3 App Store update ships. Move them into dictionaryPages and
-// restore their route files under src/app to publish them.
-export const upcomingDictionaryPages: DictionaryPageConfig[] = [
     {
         slug: "french-verb-dictionary",
         name: "French",
@@ -219,6 +182,36 @@ export const upcomingDictionaryPages: DictionaryPageConfig[] = [
             { question: "Does Verbik use European Portuguese?", answer: "Yes. Version 1.3 presents European Portuguese conventions, including forms such as nós falámos, and uses the pt-PT speech locale." },
             { question: "Are the Portuguese meanings and forms sourced?", answer: "Yes. Version 1.3 retains field-level provenance to pinned Kaikki/Wiktextract records from English Wiktionary, and uses wordfreq 3.1.1 for corpus-frequency ordering." },
             { question: "How many Portuguese entries are included?", answer: "Version 1.3 includes 26,756 European Portuguese entries, including 3,981 verbs and 75 common phrases. Dictionary counts can increase in later updates." },
+        ],
+    },
+    {
+        slug: "hebrew-verb-dictionary",
+        name: "Hebrew",
+        flag: "🇮🇱",
+        scriptGlyph: "א",
+        entryCount: 13138,
+        verbCount: 4292,
+        title: "Hebrew Verb Dictionary App — Binyanim, Roots & Niqqud",
+        description: "Search Hebrew with or without niqqud offline on iPhone. See infinitives, binyanim, roots, conjugations, transliteration, pronunciation, meanings, and examples.",
+        heading: "A Hebrew verb dictionary built around roots, binyanim, and real forms",
+        intro: "Search vocalized or unvocalized Hebrew, a conjugated form, transliteration, or an English meaning. Verbik connects the result to its infinitive and makes the root and binyan easy to inspect.",
+        image: "/apps/verbik/app-verbik-home-hebrew-framed.png",
+        imageAlt: "Verbik Hebrew dictionary home screen in the app's iPhone frame",
+        searchExamples: [
+            { query: "לומד", result: "ללמוד", explanation: "Find the infinitive from a present-tense form." },
+            { query: "ואכלתי", result: "לאכול", explanation: "Handle common attached Hebrew prefixes and a conjugated past form." },
+            { query: "lilmod", result: "ללמוד", explanation: "Search by transliteration without switching keyboards." },
+        ],
+        grammarFeatures: [
+            { title: "Niqqud-aware search", description: "Search Hebrew with or without vowel points and see vocalized forms where the source provides them." },
+            { title: "Roots and binyanim", description: "Keep the Hebrew root, binyan, learner-facing infinitive, and full entry together." },
+            { title: "Past, present, future, and more", description: "Review person, number, and gender forms plus imperatives and the infinitive." },
+            { title: "Transliteration and pronunciation", description: "Use learner-friendly romanization and listen with native audio when available or on-device speech fallback." },
+        ],
+        faq: [
+            { question: "Can I search Hebrew without niqqud?", answer: "Yes. Verbik normalizes niqqud-free searches and recognizes common Hebrew spelling and apostrophe variants." },
+            { question: "Does Verbik show Hebrew roots and binyanim?", answer: "Yes. Verb entries show the root and binyan when source data is available, followed by past, present, future, imperative, and infinitive forms." },
+            { question: "How many Hebrew entries are included?", answer: "Version 1.3 includes 13,138 Hebrew entries, including 4,292 verbs. Dictionary counts can increase in later updates." },
         ],
     },
 ];

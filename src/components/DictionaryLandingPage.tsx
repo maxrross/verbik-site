@@ -198,7 +198,7 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                         <span className="mt-1 block text-sm text-zinc-600">core search and grammar</span>
                     </div>
                 </div>
-                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.2 and may grow in later dictionary updates.</p>
+                <p className="mt-3 text-center text-xs text-zinc-500">Counts reflect Verbik 1.3 and may grow in later dictionary updates.</p>
                 {page.sourceSummary && (
                     <aside className="mx-auto mt-6 max-w-4xl rounded-2xl border border-violet-200 bg-violet-50 p-5 text-sm leading-relaxed text-zinc-700 sm:p-6">
                         <strong className="block text-base text-zinc-900">Source-backed dictionary data</strong>

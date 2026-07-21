@@ -123,12 +123,6 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         intro: "Search a French headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the dictionary entry, explains the match, and keeps the complete reference available offline.",
         image: "/apps/verbik/app-verbik-home-french-framed.png",
         imageAlt: "Verbik French dictionary home screen in the app's iPhone frame",
-        sourceSummary: "Meanings, grammatical forms, usage labels, IPA, audio, and Wiktionary examples trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Additional translated examples retain exact Tatoeba sentence IDs and URLs under CC BY 2.0 FR. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
-        sourceLinks: [
-            { label: "Wiktionary snapshot via Kaikki/Wiktextract", url: "https://kaikki.org/dictionary/rawdata.html" },
-            { label: "wordfreq 3.1.1 frequency data", url: "https://pypi.org/project/wordfreq/3.1.1/" },
-            { label: "Tatoeba example-sentence exports", url: "https://tatoeba.org/en/downloads" },
-        ],
         searchExamples: [
             { query: "parlons", result: "parler", explanation: "Find parler from the nous present form and see exactly why it matched." },
             { query: "était", result: "être", explanation: "Trace an irregular imperfect form back to the complete être entry." },
@@ -138,11 +132,11 @@ export const dictionaryPages: DictionaryPageConfig[] = [
             { title: "Core conjugation tables plus deeper form search", description: "Review six core conjugation tables and search sourced imperfect-subjunctive and participle-agreement forms for the exact form you encountered." },
             { title: "Commands and non-finite forms", description: "Keep imperative forms, the present participle, and the past participle with the main entry." },
             { title: "Nouns, adjectives, and real forms", description: "Search gendered nouns, plurals, adjective forms, meanings, examples, frequency, and pronunciation." },
-            { title: "Pinned sources and offline access", description: "Every sourced field retains its provenance, while the bundled dictionary and synthetic pronunciation remain available offline." },
+            { title: "Offline access", description: "The bundled dictionary, grammar tables, and synthetic pronunciation remain available offline." },
         ],
         faq: [
             { question: "Can Verbik find a French infinitive from a conjugated form?", answer: "Yes. Inflected-form search connects regular and irregular French forms to the dictionary entry and labels the grammatical form that matched, including its person and tense or mood when applicable." },
-            { question: "Are the French meanings and forms sourced?", answer: "Yes. Version 1.3 retains field-level provenance to pinned Kaikki/Wiktextract records from English Wiktionary, and uses wordfreq 3.1.1 for corpus-frequency ordering." },
+            { question: "Are the French meanings and forms sourced?", answer: "Yes. Every definition, grammatical form, example, and pronunciation is audited against documented sources, and frequency ordering reflects real-world usage." },
             { question: "How many French entries are included?", answer: "Version 1.3 includes 26,917 French entries, including 4,741 verbs and 76 common phrases. Dictionary counts can increase in later updates." },
         ],
     },
@@ -159,12 +153,6 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         intro: "Enter a European Portuguese headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the entry, explains the match, and keeps the full dictionary available offline.",
         image: "/apps/verbik/app-verbik-home-portuguese-framed.png",
         imageAlt: "Verbik European Portuguese dictionary home screen in the app's iPhone frame",
-        sourceSummary: "Meanings, grammatical forms, usage labels, IPA, audio, and Wiktionary examples trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Additional translated examples retain exact Tatoeba sentence IDs and URLs under CC BY 2.0 FR. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
-        sourceLinks: [
-            { label: "Wiktionary snapshot via Kaikki/Wiktextract", url: "https://kaikki.org/dictionary/rawdata.html" },
-            { label: "wordfreq 3.1.1 frequency data", url: "https://pypi.org/project/wordfreq/3.1.1/" },
-            { label: "Tatoeba example-sentence exports", url: "https://tatoeba.org/en/downloads" },
-        ],
         searchExamples: [
             { query: "falámos", result: "falar", explanation: "Find falar from the accented nós preterite used in European Portuguese." },
             { query: "são", result: "ser", explanation: "Trace an irregular third-person plural present form to the complete ser entry." },
@@ -174,11 +162,11 @@ export const dictionaryPages: DictionaryPageConfig[] = [
             { title: "European Portuguese forms", description: "See source-backed spellings and accents such as nós falámos, with pt-PT language-aware pronunciation." },
             { title: "Core conjugation tables plus deeper form search", description: "Review six core conjugation tables and search sourced imperfect and future subjunctives, personal infinitives, and participle-agreement forms." },
             { title: "Commands, gerunds, and participles", description: "Keep imperatives and non-finite forms beside the main conjugation instead of splitting them across references." },
-            { title: "Pinned sources and offline access", description: "Every displayed field retains source provenance, while the bundled dictionary and synthetic pronunciation remain available offline." },
+            { title: "Offline access", description: "The bundled dictionary, grammar tables, and synthetic pronunciation remain available offline." },
         ],
         faq: [
             { question: "Does Verbik use European Portuguese?", answer: "Yes. Version 1.3 presents European Portuguese conventions, including forms such as nós falámos, and uses the pt-PT speech locale." },
-            { question: "Are the Portuguese meanings and forms sourced?", answer: "Yes. Version 1.3 retains field-level provenance to pinned Kaikki/Wiktextract records from English Wiktionary, and uses wordfreq 3.1.1 for corpus-frequency ordering." },
+            { question: "Are the Portuguese meanings and forms sourced?", answer: "Yes. Every definition, grammatical form, example, and pronunciation is audited against documented sources, and frequency ordering reflects real-world usage." },
             { question: "How many Portuguese entries are included?", answer: "Version 1.3 includes 26,756 European Portuguese entries, including 3,981 verbs and 75 common phrases. Dictionary counts can increase in later updates." },
         ],
     },

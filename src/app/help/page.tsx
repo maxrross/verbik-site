@@ -9,7 +9,7 @@ export const metadata = buildPageMetadata({
 });
 
 const commonQuestions = [
-    { question: "Does Verbik need an internet connection?", answer: "No for core use. Search, dictionary entries, grammar tables, favorites, recents, and synthetic pronunciation work offline. StoreKit purchases, feedback, and optional Wikimedia native-speaker recordings need a connection." },
+    { question: "Does Verbik need an internet connection?", answer: "No for core use. Search, dictionary entries, grammar tables, favorites, recents, and synthetic pronunciation work offline. StoreKit purchases, feedback, and optional native-speaker recordings need a connection." },
     { question: "Is Verbik a subscription?", answer: "No. Verbik is free to download, and Verbik Pro is one non-consumable lifetime purchase. There is no trial or recurring subscription." },
     { question: "How do I restore Verbik Pro?", answer: "Open Verbik, choose More, then tap Restore purchases while signed into the Apple Account that made the purchase." },
     { question: "Can I report a wrong word or form?", answer: "Yes. Open More, choose Request a Feature or Fix, select Word correction, and include the word, language, and what appears wrong." },

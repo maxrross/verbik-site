@@ -121,9 +121,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search French conjugated forms offline on iPhone. Verbik finds the infinitive and shows sourced meanings, detailed verb tables, pronunciation, examples, nouns, and adjectives.",
         heading: "A French verb dictionary that starts with the form you found",
         intro: "Search a French headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the dictionary entry, explains the match, and keeps the complete reference available offline.",
-        image: "/apps/verbik/app-verbik-home-french.png",
-        imageAlt: "Verbik French dictionary home screen on iPhone",
-        imageIsRaw: true,
+        image: "/apps/verbik/app-verbik-home-french-framed.png",
+        imageAlt: "Verbik French dictionary home screen in the app's iPhone frame",
         sourceSummary: "Meanings, grammatical forms, usage labels, IPA, audio, and Wiktionary examples trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Additional translated examples retain exact Tatoeba sentence IDs and URLs under CC BY 2.0 FR. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
         sourceLinks: [
             { label: "Wiktionary snapshot via Kaikki/Wiktextract", url: "https://kaikki.org/dictionary/rawdata.html" },
@@ -158,9 +157,8 @@ export const dictionaryPages: DictionaryPageConfig[] = [
         description: "Search European Portuguese conjugated forms offline on iPhone. Verbik finds the infinitive and shows sourced meanings, complete grammar, pronunciation, examples, nouns, and adjectives.",
         heading: "A European Portuguese dictionary for the form you actually saw",
         intro: "Enter a European Portuguese headword, conjugated form, inflected noun or adjective, or English meaning. Verbik identifies the entry, explains the match, and keeps the full dictionary available offline.",
-        image: "/apps/verbik/app-verbik-home-portuguese.png",
-        imageAlt: "Verbik European Portuguese dictionary home screen on iPhone",
-        imageIsRaw: true,
+        image: "/apps/verbik/app-verbik-home-portuguese-framed.png",
+        imageAlt: "Verbik European Portuguese dictionary home screen in the app's iPhone frame",
         sourceSummary: "Meanings, grammatical forms, usage labels, IPA, audio, and Wiktionary examples trace to a pinned July 2026 English Wiktionary snapshot extracted by Kaikki/Wiktextract under CC BY-SA 3.0. Additional translated examples retain exact Tatoeba sentence IDs and URLs under CC BY 2.0 FR. Frequency ordering uses pinned wordfreq 3.1.1 data under Apache-2.0.",
         sourceLinks: [
             { label: "Wiktionary snapshot via Kaikki/Wiktextract", url: "https://kaikki.org/dictionary/rawdata.html" },

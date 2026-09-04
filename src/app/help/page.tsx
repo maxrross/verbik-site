@@ -4,13 +4,13 @@ import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Help & Support",
-    description: "Verbik help for searching word forms, offline dictionaries, pronunciation, favorites, iCloud sync, the lifetime Pro unlock, restoration, and troubleshooting.",
+    description: "Verbik help for word forms, offline dictionaries, practice games, Pro plans, existing lifetime purchases, restoration, and troubleshooting.",
     path: "/help",
 });
 
 const commonQuestions = [
     { question: "Does Verbik need an internet connection?", answer: "No for core use. Search, dictionary entries, grammar tables, favorites, recents, and synthetic pronunciation work offline. StoreKit purchases, feedback, and optional native-speaker recordings need a connection." },
-    { question: "Is Verbik a subscription?", answer: "No. Verbik is free to download, and Verbik Pro is one non-consumable lifetime purchase. There is no trial or recurring subscription." },
+    { question: "Is Verbik a subscription?", answer: "Version 1.9 introduces annual and monthly Pro plans for new customers, with a 7-day annual trial for eligible new subscribers. Until 1.9 is available, the offers in your installed version apply. Existing lifetime purchases keep full access without a subscription." },
     { question: "How do I restore Verbik Pro?", answer: "Open Verbik, choose More, then tap Restore purchases while signed into the Apple Account that made the purchase." },
     { question: "Can I report a wrong word or form?", answer: "Yes. Open More, choose Request a Feature or Fix, select Word correction, and include the word, language, and what appears wrong." },
 ];
@@ -39,7 +39,7 @@ export default function HelpIndex() {
                 <section id="getting-started" className="scroll-mt-24 rounded-2xl bg-white p-5 shadow-outline sm:p-6">
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Getting started</h2>
                     <ol className="list-decimal space-y-2 pl-5 text-zinc-600">
-                        <li>Open Search and choose Russian, Spanish, Italian, French, European Portuguese, or Hebrew.</li>
+                        <li>Choose Russian, Spanish, Italian, French, European Portuguese, or Hebrew. In version 1.9, new users can preview a real word before choosing a Pro plan.</li>
                         <li>Choose the language in which you want definitions where translated glosses are available.</li>
                         <li>Type a headword, conjugated or declined form, transliteration, or meaning.</li>
                         <li>Open a result to see why it matched, then review grammar, pronunciation, examples, frequency, and related entries.</li>
@@ -63,7 +63,7 @@ export default function HelpIndex() {
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Offline use and privacy</h2>
                     <ul className="list-disc space-y-2 pl-5 text-zinc-700">
                         <li>The six dictionaries, search index, grammar tables, favorites, recents, and synthetic speech are bundled or processed on-device.</li>
-                        <li>Verbik has no account, ads, or third-party tracking SDK.</li>
+                        <li>Verbik needs no account and displays no in-app ads. Privacy-restricted analytics measure product use and campaigns without sending exact search terms or collecting IDFA.</li>
                         <li>Favorites, recent entries, and language choices may sync through your Apple iCloud account.</li>
                         <li>Purchases, optional native audio, and feedback require a network connection.</li>
                     </ul>
@@ -90,10 +90,10 @@ export default function HelpIndex() {
                 <section id="pro" className="scroll-mt-24 rounded-2xl bg-white p-5 shadow-outline sm:p-6">
                     <h2 className="mb-3 text-xl font-semibold text-zinc-900">Verbik Pro and purchases</h2>
                     <ul className="list-disc space-y-2 pl-5 text-zinc-600">
-                        <li>The free tier exposes a useful sample from each word category and language.</li>
-                        <li>Verbik Pro unlocks every entry, grammar table, example, and pronunciation feature for one lifetime purchase.</li>
-                        <li>There is no subscription or free trial.</li>
-                        <li>To restore, open <strong className="text-zinc-800">More → Restore purchases</strong> while signed into the purchasing Apple Account.</li>
+                        <li>Version 1.9 introduces annual and monthly Pro subscriptions for full dictionary and game access. Existing lifetime purchases remain valid.</li>
+                        <li>Eligible new subscribers can try the annual plan free for 7 days. It then renews at the displayed yearly price unless canceled. The monthly plan has no free trial.</li>
+                        <li>Manage or cancel subscriptions in Apple Account settings. Deleting the app does not cancel a subscription.</li>
+                        <li>To restore, tap <strong className="text-zinc-800">Restore Purchases</strong> on the welcome screen, paywall, or More screen while signed into the purchasing Apple Account.</li>
                         <li>Apple handles charges and refunds. Request a refund at <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-[#5A00F5]">reportaproblem.apple.com</a>.</li>
                     </ul>
                 </section>

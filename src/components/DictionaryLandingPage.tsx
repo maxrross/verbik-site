@@ -125,7 +125,7 @@ export function DictionaryLandingPage({ page }: { page: DictionaryPageConfig }) 
                                 <img src="/icons/apple-logo-white.svg" alt="" aria-hidden="true" className="h-5 w-5" />
                                 Download on the App Store
                             </a>
-                            <span className="text-sm text-zinc-500">Free to download · $14.99 lifetime Pro unlock</span>
+                            <span className="text-sm text-zinc-500">Free to download · See Pro offers in the app</span>
                         </div>
                     </div>
                     <div

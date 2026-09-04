@@ -28,7 +28,7 @@ export function SupportCards({ app }: { app: AppConfig }) {
                         </p>
                         <p className="mt-auto pt-6 mb-2">
                             <Link
-                                href={`/help/${app.slug}`}
+                                href="/help"
                                 className="flex items-center gap-2 font-medium px-4 py-2 text-[#007AFF] border border-transparent group-hover:border-[#007AFF]/50 group-hover:bg-white rounded-full transition"
                             >
                                 <span>View Docs</span>

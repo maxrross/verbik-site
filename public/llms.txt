@@ -8,14 +8,14 @@ Support: mailto:support@verbik.app
 
 ## Product facts
 
-- Current website copy reflects Verbik 1.3.
+- Current public App Store release is 1.8. Version 1.9 and its new subscription plans are being prepared; availability is subject to App Review.
 - Requires iOS 17.0 or later.
 - Includes 159,768 selectable-language entries: 39,760 Russian, 26,490 Spanish, 26,707 Italian, 26,917 French, 26,756 European Portuguese, and 13,138 Hebrew.
 - Every included definition, grammatical form, example, and pronunciation is audited against documented sources before release.
 - Core dictionaries, search, grammar tables, favorites, recents, and synthetic pronunciation work offline.
 - Optional native-speaker recordings may be downloaded when available.
-- No account, advertising, or third-party tracking SDK is required.
-- The app is free to download. Verbik Pro is an optional $14.99 U.S. one-time lifetime unlock, not a subscription or trial.
+- No account or in-app advertising. Privacy-restricted AppsFlyer analytics measure aggregate product use and campaigns without collecting IDFA or exact search terms.
+- Free to download. Version 1.9 introduces annual ($39.99 U.S.) and monthly ($9.99 U.S.) Pro plans. Eligible new subscribers can receive a seven-day trial on the annual plan only. Localized prices and available offers shown in the app control. Existing lifetime purchases remain honored without another payment.
 
 ## Official pages
 

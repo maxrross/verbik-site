@@ -65,7 +65,7 @@ const SITE_UI_COPY: Record<SiteLocale, SiteUiCopy> = {
     en: {
         hero: {
             overviewLabel: "Overview",
-            defaultDownloadNote: "Free to download. One optional lifetime Pro unlock. No subscription.",
+            defaultDownloadNote: "Free to download. See Pro offers in the app.",
             featureLinkDesktop: "{{appName}} — six sourced offline dictionaries built for iPhone",
             featureLinkMobile: "Explore features",
             appIconAlt: "{{appName}} icon",
@@ -115,7 +115,6 @@ export const apps: AppConfig[] = [
             "/apps/verbik/02-full-conjugation.jpg",
             "/apps/verbik/03-six-offline-dictionaries.jpg",
             "/apps/verbik/04-pronunciation-and-niqqud.jpg",
-            "/apps/verbik/05-lifetime-unlock.jpg",
         ],
         cardSize: "standard",
         features: [
@@ -142,12 +141,12 @@ export const apps: AppConfig[] = [
             {
                 icon: "lock.shield",
                 title: "Private by design",
-                body: "No account, ads, or third-party tracking. Core search and synthetic pronunciation work offline.",
+                body: "No account or in-app ads. Core search and synthetic pronunciation work offline, with privacy-restricted analytics described in our privacy policy.",
             },
             {
-                icon: "infinity",
-                title: "One lifetime unlock",
-                body: "Unlock every dictionary and full entry for $14.99 once. There is no subscription.",
+                icon: "star",
+                title: "Remember what you find",
+                body: "Save favorites, then practice them with Cards, Pairs, and quick Rush rounds. Turn a useful lookup into a word you remember.",
             },
         ],
         steps: [
@@ -182,13 +181,13 @@ export const apps: AppConfig[] = [
             "A dictionary search fails because you only know the inflected form",
             "Grammar tables are split across websites and language-specific apps",
             "Transliteration and Hebrew text without niqqud return weak results",
-            "Subscriptions make a simple reference tool unnecessarily expensive",
+            "A useful word is easy to forget after a single lookup",
         ],
         solutions: [
             "Search headwords, meanings, inflections, and transliterations",
             "Keep six source-backed grammar dictionaries in one app",
             "Understand the match with language-specific labels",
-            "Pay once for permanent access with no account or tracking",
+            "Save favorites and practice the words you actually want to learn",
         ],
         faqItems: [
             {
@@ -205,20 +204,20 @@ export const apps: AppConfig[] = [
             },
             {
                 question: "How much does Verbik cost?",
-                answer: "Verbik is free to download and includes a useful sample from every dictionary. A one-time $14.99 purchase unlocks all entries and all six dictionaries permanently. There is no trial or subscription.",
+                answer: "Verbik is free to download. Version 1.9, currently being prepared for App Review, introduces Pro at US $39.99/year or $9.99/month, with a 7-day free trial on the annual plan for eligible new subscribers. The annual plan renews at $39.99/year after the trial unless canceled. The monthly plan has no free trial. Until 1.9 is available, the offers shown in your installed version apply. Existing lifetime purchases stay unlocked. Local prices and eligibility are shown by Apple before purchase.",
             },
             {
                 question: "Does Verbik support Hebrew niqqud and Russian stress?",
                 answer: "Yes. Hebrew entries can show niqqud and accept common niqqud-free searches. Russian entries include stress and transliteration where available.",
             },
             {
-                question: "Does Verbik require an account or track me?",
-                answer: "No. Verbik requires no account, includes no ads, and adds no third-party tracking SDK. Its core dictionary experience runs on your device.",
+                question: "Does Verbik require an account?",
+                answer: "No account is required, and there are no in-app ads. Core dictionary features run on your device. Verbik uses privacy-restricted AppsFlyer analytics to measure app usage and purchases; see the privacy policy for what is collected and how it is limited.",
             },
         ],
         appStoreUrl: "https://apps.apple.com/us/app/verbik-verb-forms-dictionary/id6788358735",
-        downloadCtaNote: "$14.99 lifetime unlock. No subscription.",
-        privacyMessage: "Core dictionaries and synthetic pronunciation work offline. No account, ads, or third-party tracking.",
+        downloadCtaNote: "Free to download. See Pro offers in the app.",
+        privacyMessage: "Core dictionaries and synthetic pronunciation work offline. No account or in-app ads. See our privacy policy for analytics details.",
     },
 ];
 

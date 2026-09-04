@@ -13,7 +13,7 @@ export default function PrivacyPage() {
             <article className="mx-auto max-w-4xl rounded-3xl bg-gray-50 p-5 shadow-outline sm:p-7 md:p-10">
                 <small className="mb-4 inline-flex font-semibold uppercase tracking-wider text-[#5A00F5]">Legal</small>
                 <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">Verbik Privacy Policy</h1>
-                <p className="mb-10 text-zinc-500">Last updated: July 23, 2026</p>
+                <p className="mb-10 text-zinc-500">Last updated: September 4, 2026</p>
 
                 <div className="space-y-7 leading-relaxed text-zinc-700 md:space-y-9">
                     <section className="rounded-2xl border border-violet-200 bg-violet-50 p-5 sm:p-6">
@@ -74,6 +74,7 @@ export default function PrivacyPage() {
                             <li>app launches and SDK operational information;</li>
                             <li>the selected dictionary language, whether a submitted search returned a result, and the number of results—but not the search text;</li>
                             <li>generic dictionary-entry-view and favorite-added events without the entry or word;</li>
+                            <li>onboarding completion, paywall views, checkout starts, selected plan, and paywall version;</li>
                             <li>the Verbik Pro product identifier, price, currency, and quantity when a purchase succeeds; and</li>
                             <li>campaign and attribution information needed to measure whether advertising resulted in an install or purchase.</li>
                         </ul>
@@ -102,7 +103,7 @@ export default function PrivacyPage() {
                     <section>
                         <h2 className="mb-2 text-xl font-semibold text-zinc-900">Purchases</h2>
                         <p>
-                            Verbik Pro is a non-consumable in-app purchase processed by Apple through StoreKit. Apple handles your Apple Account, payment method, billing, refunds, and transaction records. Verbik receives only the product and entitlement information needed to unlock Pro; we do not receive your card number.
+                            Apple processes Verbik Pro purchases through StoreKit, including existing lifetime purchases and the auto-renewable plans introduced in version 1.9. Apple handles your Apple Account, payment method, billing, refunds, and transaction records. Verbik uses verified product, transaction, offer, and expiration information to unlock Pro and distinguish paid purchases from free trials or free redemptions. TestFlight and other sandbox transactions are excluded from production purchase analytics. A local transaction identifier helps prevent duplicate analytics events. We do not receive your card number.
                         </p>
                     </section>
 

@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../config/metadata";
 
 export const metadata = buildPageMetadata({
     title: "Terms of Use",
-    description: "Terms for using the Verbik dictionary app and website, including the free tier, lifetime Pro purchase, dictionary content, and Apple services.",
+    description: "Terms for using Verbik, including Pro subscriptions, existing lifetime purchases, dictionary content, and Apple services.",
     path: "/terms",
 });
 
@@ -13,7 +13,7 @@ export default function TermsPage() {
             <article className="mx-auto max-w-4xl rounded-3xl bg-gray-50 p-5 shadow-outline sm:p-7 md:p-10">
                 <small className="mb-4 inline-flex font-semibold uppercase tracking-wider text-[#5A00F5]">Legal</small>
                 <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">Verbik Terms of Use</h1>
-                <p className="mb-10 text-zinc-500">Last updated: July 16, 2026</p>
+                <p className="mb-10 text-zinc-500">Last updated: September 4, 2026</p>
 
                 <div className="space-y-7 leading-relaxed text-zinc-700 md:space-y-9">
                     <section>
@@ -33,9 +33,11 @@ export default function TermsPage() {
                     <section className="rounded-2xl border border-violet-200 bg-violet-50 p-5 sm:p-6">
                         <h2 className="mb-3 text-xl font-semibold text-zinc-900">Free access and Verbik Pro</h2>
                         <ul className="list-disc space-y-2 pl-5">
-                            <li>Verbik is free to download and includes a limited sample of dictionary entries.</li>
-                            <li>Verbik Pro is one non-consumable lifetime unlock. It is not a subscription and has no free trial.</li>
-                            <li>The price and local currency shown by the App Store at purchase time control. The current U.S. price is $14.99.</li>
+                            <li>Verbik is free to download. Version 1.9 introduces a language-specific preview followed by a Pro plan for full access. Until that version is available, the offers in your installed App Store version apply.</li>
+                            <li>New Pro plans in version 1.9 are auto-renewable subscriptions: $39.99 per year or $9.99 per month in the U.S. Eligible new subscribers may receive a 7-day free trial on the annual plan. The monthly plan has no introductory free trial.</li>
+                            <li>The annual trial converts to the displayed annual charge unless canceled. Subscriptions renew automatically unless canceled at least 24 hours before the current period ends. Manage or cancel in Apple Account subscription settings. Deleting Verbik does not cancel a subscription.</li>
+                            <li>The price, trial eligibility, period, and local currency displayed by Apple when you confirm a purchase control. Access continues for the entitled period after cancellation.</li>
+                            <li>Existing non-consumable lifetime Pro purchases remain honored without a subscription or another payment. Buying a new subscription is never required to retain that purchased access.</li>
                             <li>Apple processes payment, purchase restoration, taxes, family or account eligibility, and refund requests.</li>
                             <li>A “lifetime” unlock means access for as long as Verbik remains offered and technically supported; it does not promise perpetual availability of every device, operating system, source, or third-party service.</li>
                         </ul>

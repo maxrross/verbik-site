@@ -85,7 +85,7 @@ function Vignette({ icon, app }: { icon: string; app: AppConfig }) {
 }
 
 export function FeatureGrid({ app }: { app: AppConfig }) {
-    const heading = "Find the form. Understand the word.";
+    const heading = "Find it. Understand it. Remember it.";
 
     return (
         <section id="features" className="container py-16 sm:py-20 md:py-24">
@@ -98,12 +98,12 @@ export function FeatureGrid({ app }: { app: AppConfig }) {
                 </small>
                 <h2 className="text-3xl md:text-5xl font-bold text-zinc-900">{heading}</h2>
                 <p className="text-base sm:text-lg md:text-2xl max-w-4xl text-zinc-600">
-                    Core functionality focused on speed, privacy, and output quality.
+                    Look up the word you found, explore its forms, and make it part of your vocabulary.
                 </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-                {app.features.slice(0, 3).map((feature) => (
+                {app.features.map((feature) => (
                     <article
                         key={feature.title}
                         className="group bg-gray-50 rounded-3xl shadow-outline p-6 sm:p-7 md:p-9 text-left transition duration-300 hover:-translate-y-1 hover:bg-white"
